@@ -26,8 +26,8 @@ db.on('error', (err) => {
 
 // ====== Schemas ======
 const userSchema = new mongoose.Schema({
-  username: { type: String, unique: true },
-  password: String,
+  username: { type: String, unique: true, required: true },
+  password: { type: String, required: true },
   solvedQuestions: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Question' }]
 })
 
@@ -79,6 +79,7 @@ function verifyToken(req, res, next) {
 app.post('/signup', async (req, res) => {
   try {
     const { username, password } = req.body
+    if (!username || !password) return res.status(400).json({ error: 'All fields are required' })
     const existing = await User.findOne({ username })
     if (existing) return res.status(409).json({ error: 'username already used' })
 
@@ -100,11 +101,12 @@ app.post('/login', async (req, res) => {
     if (!match) return res.status(401).json({ error: 'Incorrect credentials' })
 
     const token = jwt.sign({ id: user._id, username: user.username }, process.env.KEY)
-    res.json({ message: "Success", token })
+    res.json({ message: "Success", token, username: user.username })
   } catch (err) {
     res.status(400).json({ error: 'Bad request' })
   }
 })
+
 
 // ====== Stats ======
 app.get('/stats', verifyToken, async (req, res) => {
@@ -132,7 +134,7 @@ app.get('/stats', verifyToken, async (req, res) => {
       questions: { total: totalQ, correct, incorrect },
       teststaken: tests.length,
       skills: {
-        listening: 25, grasping: 25, retention: 25, application: 25 // placeholder
+        learning: 25, grasping: 25, retention: 25, application: 25 // placeholder
       }
     })
   } catch {
@@ -163,55 +165,97 @@ app.post('/teststart', verifyToken, async (req, res) => {
 app.post('/testsubmit', verifyToken, async (req, res) => {
   try {
     const { testID, answers } = req.body
-    const test = await Test.findById(testID)
+    const test = await Test.findById(testID).populate('questions');
     if (!test) return res.status(400).json({ error: 'Invalid testID' })
 
     let score = 0
-    test.questions.forEach((q, i) => {
-      if (answers[i] === q.answer) score++
+    test.questions.forEach((questionObject, i) => {
+      if (answers[i] === questionObject.answer) {
+        score++;
+      }
     })
 
     test.answers = answers
     test.score = score
     await test.save()
 
-    res.json({ message: "success" })
+    res.json({ message: "success", score });
   } catch {
     res.status(400).json({ error: 'Bad request' })
   }
 })
 
+// ====== Get Filter Options ======
+app.get('/practiceselect', async (req, res) => {
+  try {
+    // Create promises for each distinct query
+    const subjectsPromise = Question.distinct('subject');
+    const chaptersPromise = Question.distinct('chapter');
+    const difficultiesPromise = Question.distinct('category');
+
+    // Run all promises in parallel for better performance
+    const [subjects, chapters, difficulties] = await Promise.all([
+      subjectsPromise,
+      chaptersPromise,
+      difficultiesPromise
+    ]);
+
+    // Send the results back in a structured object
+    res.json({
+      subjects,
+      chapters,
+      difficulties
+    });
+
+  } catch (err) {
+    console.error("Error fetching filters:", err);
+    res.status(500).json({ error: 'Failed to fetch filter options' });
+  }
+});
+
 // ====== Practice Question ======
 app.post('/practicequestion', verifyToken, async (req, res) => {
   try {
-    const { subject, chapters } = req.body
+    // 1. Destructure the new 'difficulty' field from the body
+    const { subject, chapters, difficulty } = req.body;
 
-    // 1. Get the current user's solved question IDs
-    const user = await User.findById(req.user.id).select('solvedQuestions')
-    const solvedIds = user ? user.solvedQuestions : []
+    // Get the current user's solved question IDs (no change here)
+    const user = await User.findById(req.user.id).select('solvedQuestions');
+    const solvedIds = user ? user.solvedQuestions : [];
 
-    // 2. Find a question that is NOT IN the user's solved list
-    const q = await Question.findOne({
+    // 2. Build the base query object
+    const query = {
       subject,
       chapter: { $in: chapters },
       _id: { $nin: solvedIds } // Exclude solved questions
-    })
+    };
 
-    // Handle case where all questions are solved
-    if (!q) {
-      return res.json({ message: "You've answered all available questions!" })
+    // 3. If a difficulty is provided, add it to the query
+    if (difficulty) {
+      query.category = difficulty; // The schema field for difficulty is 'category'
     }
 
+    // 4. Execute the query
+    const qArr = await Question.aggregate([
+      { $match: query },  // filter by subject, chapters, difficulty, unsolved
+      { $sample: { size: 1 } }  // pick 1 random document
+    ]);
+
+    if (qArr.length === 0) {
+      return res.json({ message: "No matching questions found!" });
+    }
+
+    const q = qArr[0];
     res.json({
       questionID: q._id,
       question: q.question,
       options: q.options
-    })
-  } catch (err) { //log the error
-    console.error(err)
-    res.status(400).json({ error: 'Bad request' })
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(400).json({ error: 'Bad request' });
   }
-})
+});
 
 // ====== Practice Submit ======
 app.post('/practicesubmit', verifyToken, async (req, res) => {

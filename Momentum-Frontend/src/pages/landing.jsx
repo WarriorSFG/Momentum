@@ -1,4 +1,3 @@
-import React from "react";
 import photo from "../assets/background.jpg";
 import Logo from "../assets/logo.svg";
 import {Link} from 'react-router-dom'
@@ -46,7 +45,7 @@ export default function LandingPage() {
             MOMENTUM
           </h2>
 
-          <p className="mt-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] mb-6 tracking-wide">
+          <p className="mt-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] mb-6 tracking-wide font-julius-sans-one">
             INTRODUCING INDIA&apos;S FIRST EVER AI BASED LEARNING PLATFORM
           </p>
 
