@@ -1,15 +1,15 @@
-import React from 'react';
-
 const QuestionSelect = ({
-  answers, // The array of user's answers (e.g., [0, null, 3, ...])
-  currentQuestionIndex, // The index of the current question (0-9)
-  onQuestionSelect, // Function to call when a number is clicked
-  onSubmit, // Function to call when the final submit button is clicked
+  answers,
+  currentQuestionIndex,
+  onQuestionSelect,
+  onSubmit,
+  isSubmitting
 }) => {
   const getButtonClass = (index) => {
     if (index === currentQuestionIndex) {
       return "bg-[#FFD966] text-black ring-2 ring-white"; // Current question
     }
+    // This check is now correct. It will only be true if an answer object exists.
     if (answers[index] !== null) {
       return "bg-[#8AE08A] text-black"; // Answered question
     }
@@ -30,11 +30,16 @@ const QuestionSelect = ({
           </button>
         ))}
       </div>
-      <button 
-        onClick={onSubmit} 
-        className="w-full bg-[#8AE08A] text-black font-bold py-2 rounded-xl hover:bg-green-400"
+      <button
+        onClick={onSubmit}
+        disabled={isSubmitting}
+        className={`w-full text-black font-bold py-2 rounded-xl transition ${
+          isSubmitting 
+            ? "bg-gray-500 cursor-not-allowed" 
+            : "bg-[#8AE08A] hover:bg-green-400"
+        }`}
       >
-        SUBMIT TEST
+        {isSubmitting ? "SUBMITTING..." : "SUBMIT TEST"}
       </button>
     </div>
   );

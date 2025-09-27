@@ -1,4 +1,5 @@
 const express = require('express')
+const PDFDocument = require('pdfkit');
 const mongoose = require('mongoose')
 const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
@@ -45,7 +46,12 @@ const testSchema = new mongoose.Schema({
   testdate: { type: Date, default: Date.now },
   score: Number,
   questions: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Question' }],
-  answers: [Number]
+  answers: [{
+    answer: Number,
+    timeTaken: Number,
+    globalTime: Number,
+    _id: false // Prevents Mongoose from adding a sub-document _id
+  }]
 });
 
 const practiceSchema = new mongoose.Schema({
@@ -73,6 +79,34 @@ function verifyToken(req, res, next) {
     req.user = decoded
     next()
   })
+}
+
+function verifyTokenFromHeaderOrQuery(req, res, next) {
+  let token;
+  const authHeader = req.headers['authorization'];
+
+  // 1. Check for token in the Authorization header
+  if (authHeader && authHeader.startsWith('Bearer ')) {
+    token = authHeader.split(' ')[1];
+  }
+  // 2. If not in header, check for it in the URL query parameter
+  else if (req.query.token) {
+    token = req.query.token;
+  }
+
+  // If no token is found in either place, deny access
+  if (!token) {
+    return res.status(403).json({ error: 'Token required' });
+  }
+
+  // Verify the token
+  jwt.verify(token, process.env.KEY, (err, decoded) => {
+    if (err) {
+      return res.status(401).json({ error: 'Invalid token' });
+    }
+    req.user = decoded;
+    next();
+  });
 }
 
 // ====== Auth Routes ======
@@ -164,26 +198,37 @@ app.post('/teststart', verifyToken, async (req, res) => {
 // ====== Submit Test ======
 app.post('/testsubmit', verifyToken, async (req, res) => {
   try {
-    const { testID, answers } = req.body
-    const test = await Test.findById(testID).populate('questions');
-    if (!test) return res.status(400).json({ error: 'Invalid testID' })
+    const { testID, answers } = req.body; // 'answers' is now [{answer, timeTaken}, ...]
 
-    let score = 0
-    test.questions.forEach((questionObject, i) => {
-      if (answers[i] === questionObject.answer) {
+    const populatedTest = await Test.findById(testID).populate('questions');
+    if (!populatedTest) {
+      return res.status(400).json({ error: 'Invalid testID' });
+    }
+
+    let score = 0;
+    populatedTest.questions.forEach((questionObject, i) => {
+      // Compare the answer property of the answer object
+      if (answers[i] && answers[i].answer === questionObject.answer) {
         score++;
       }
-    })
+    });
 
-    test.answers = answers
-    test.score = score
-    await test.save()
+    await Test.updateOne(
+      { _id: testID },
+      {
+        $set: {
+          answers: answers, // Save the array of objects
+          score: score
+        }
+      }
+    );
 
     res.json({ message: "success", score });
-  } catch {
-    res.status(400).json({ error: 'Bad request' })
+  } catch (err) {
+    console.error(err);
+    res.status(400).json({ error: 'Bad request' });
   }
-})
+});
 
 // ====== Get Filter Options ======
 app.get('/practiceselect', async (req, res) => {
@@ -315,6 +360,128 @@ app.get('/testreview/:testId', verifyToken, async (req, res) => {
 
   res.json(test);
 });
+
+// ====== Generate Test Report PDF ======
+app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) => {
+  try {
+    const { testId } = req.params;
+    const username = req.user.username;
+
+    // 2. Fetch the test data and populate the questions
+    const test = await Test.findById(testId).populate('questions');
+    if (!test || test.user.toString() !== req.user.id) {
+      return res.status(404).json({ error: 'Test not found or access denied.' });
+    }
+
+    // 3. Create a new PDF document
+    const doc = new PDFDocument({ size: 'A4', margin: 50 });
+    doc.image('background.jpg', 0, 0, {
+      width: doc.page.width,
+      height: doc.page.height
+    });
+
+    doc.image('logo.png', -50, -50, { width: 100 });
+
+    // 4. Set headers to stream the PDF to the client
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', `attachment; filename="test-report-${testId}.pdf"`);
+    doc.pipe(res); //pip the pdf output directly to response
+
+    const x = doc.page.width - 296 / 3 - 30;  // 20px margin from right
+    const y = doc.page.height - 37 / 3 - 30; // 20px margin from bottom
+
+    // 1. Define the function to add a background
+    const addBackground = () => {
+      doc.image('background.jpg', 0, 0, {
+        width: doc.page.width,
+        height: doc.page.height,
+        align: 'center',
+        valign: 'center'
+      });
+      doc.roundedRect(20, 20, doc.page.width - 40, doc.page.height - 40, 10).fillColor('#E6E6FA').fill();
+      doc.image('logo.png', x, y, { width: 296 / 3, height: 37 / 3 });
+      // Set a default text color for the new page
+      doc.fillColor('black');
+    };
+
+    // 2. Listen for the 'pageAdded' event
+    doc.on('pageAdded', addBackground);
+
+    // 3. Manually add the background to the FIRST page
+    addBackground();
+    // Header
+    doc.fontSize(24).font('Helvetica-Bold').text('Test Report', { align: 'center' });
+    doc.moveDown();
+
+    // Test Details
+    doc.fontSize(12);
+
+    // For Test ID
+    doc.font('Helvetica-Bold').text('Test ID: ', { continued: true });
+    doc.font('Helvetica').text(test._id);
+
+    // For Candidate Name
+    doc.font('Helvetica-Bold').text('Candidate name: ', { continued: true });
+    doc.font('Helvetica').text(username);
+
+    // For Date
+    doc.font('Helvetica-Bold').text('Date: ', { continued: true });
+    doc.font('Helvetica').text(new Date(test.testdate).toLocaleDateString());
+
+    // For Score
+    const scoreColor = test.score / test.questions.length >= 0.6 ? 'green' : 'red';
+    doc.font('Helvetica-Bold').text('Score: ', { continued: true });
+    doc.font('Helvetica').fillColor(scoreColor).text(`${test.score} / ${test.questions.length}`);
+
+    // Reset text color and move down
+    doc.fillColor('black');
+    doc.moveDown(2);
+
+    // Question by Question Analysis
+    doc.fontSize(16).font('Helvetica-Bold').text('Question Analysis');
+    doc.moveDown();
+
+    test.questions.forEach((q, index) => {
+      const userAnswerObj = test.answers[index];
+      const isCorrect = userAnswerObj?.answer === q.answer;
+      doc.fillColor('black');
+      doc.fontSize(12).font('Helvetica-Bold').text(`Question ${index + 1}: ${q.question}`);
+      doc.font('Helvetica');
+
+      q.options.forEach((option, i) => {
+        let label = `${i + 1}. ${option}`;
+        let color = 'black';
+
+        if (i === userAnswerObj?.answer && isCorrect) {
+          label += ' (Your Answer)';
+          color = 'green';
+        }
+        else if (i === q.answer) {
+          label += ' (Correct Answer)';
+          color = '#c0b236';
+        } else if (i === userAnswerObj?.answer && !isCorrect) {
+          label += ' (Your Answer)';
+          color = 'red';
+        }
+
+        doc.fillColor(color).text(label, { indent: 20 });
+      });
+
+      doc.moveDown();
+      doc.fillColor('#751386').text(`Time Taken: ${userAnswerObj?.timeTaken || 0} seconds`);
+      doc.fillColor('#751386').text(`Score: ${isCorrect ? 1 : 0}`);
+      doc.moveDown();
+    });
+
+    // 5. Finalize the PDF
+    doc.end();
+
+  } catch (err) {
+    console.error("Error generating PDF:", err);
+    res.status(500).json({ error: 'Failed to generate PDF report.' });
+  }
+});
+
 
 app.listen(port, () => {
   console.log(`server started, listening to port ${port}`)
