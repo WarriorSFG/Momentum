@@ -1,0 +1,3523 @@
+[
+    {
+        "question": "What is 75% as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you write 0.02 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the formula for percentage error?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Convert 1/8 to a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 300% of a number?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'rate' in the context of percentage change.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.5% written as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you find the original number if you know a percentage of it?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 2.5 expressed as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the meaning of 'per annum' in interest calculations?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Convert the fraction 2/5 to a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you represent a 50% decrease in a value mathematically?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 10% of 100?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'commission' as a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 7/10 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate a percentage profit?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.45 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal equivalent of 80%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'markup' in percentage terms.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1% of 1000?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Explain why a 50% increase followed by a 50% decrease does not return to the original value.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the difference in outcome between taking a 10% discount first, then adding a 10% tax, versus adding the tax first, then taking the discount.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If an item's price is reduced by 25%, by what percentage must the new price be increased to return to the original price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how compound interest differs from simple interest over multiple years.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it incorrect to simply add percentages of different bases together?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a value triples, what is the percentage increase?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the concept of 'percentage points' and how it differs from a 'percentage change'.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why can a percentage error be greater than 100%?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If 20% of the students are boys, does that mean 80% are girls? What assumption is being made?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how to mentally calculate 20% of any number.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it important to identify the 'whole' or 'total' before calculating a part's percentage?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If you add 25% of a number to itself, what single percentage of the original number do you have?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe a scenario where a percentage decrease is a positive outcome.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If the length of a square is increased by 10%, what is the percentage increase in its area?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain why '20% off' is a better deal than 'buy four, get one free'.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a team's win rate is 60%, what does that imply about their loss rate, assuming no draws?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why does the base of a percentage matter when comparing changes?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the logic behind calculating reverse percentages.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If an ingredient makes up 5% of a mixture, how much of that ingredient is in 200kg of the mixture?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is a 100% profit the same as doubling your investment?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A phone costs Rs. 50,000. It is sold at a 15% discount. What is the selling price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "An exam has 80 questions. A student answers 75% of them correctly. How many questions did they get wrong?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "The population of a city increased from 400,000 to 450,000. What is the percentage increase?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 35% of 280?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A mixture of 40 litres has 10% water. If 5 litres of water is added, what is the new percentage of water in the mixture?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 12% of a number is 108, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A man's salary is Rs. 80,000. He spends 10% on rent, 20% of the remainder on food. How much money is left?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "In a class of 50 students, 40% are girls. How many boys are in the class?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A shopkeeper buys an item for Rs. 500 and sells it for Rs. 625. Find the profit percentage.",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What percent of 400 is 60?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "The price of petrol increased by 20%. By what percent should a car owner reduce his consumption to keep his expenditure the same?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Two candidates contested an election. One got 62% of the votes and won by 144 votes. Find the total number of votes cast.",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A number is increased by 20% and then decreased by 20%. Find the net increase or decrease percent.",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A student has to score 40% marks to pass. He gets 178 marks and fails by 22 marks. What are the maximum marks?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If the price of sugar falls by 10%, how much more sugar can be bought for the same money that was sufficient to buy 18 kg of sugar at the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "The value of a machine depreciates at the rate of 10% every year. It was purchased 3 years ago. If its present value is Rs. 8748, what was its purchase price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A is 20% more than B and B is 25% more than C. By what percent is A more than C?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "In an examination, 35% of the students failed in one subject and 42% failed in another subject. If 15% of students failed in both subjects, what percentage of students passed in both subjects?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A fruit seller had some apples. He sells 40% of the apples and still has 420 apples. Originally, he had how many apples?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 20% of 50% of 800?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A number is decreased by 10% and then increased by 10%. The number so obtained is 10 less than the original number. What was the original number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Fresh fruit contains 68% water and dry fruit contains 20% water. How much dry fruit can be obtained from 100 kg of fresh fruits?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A batsman scored 110 runs which included 3 boundaries and 8 sixes. What percent of his total score did he make by running between the wickets?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If the numerator of a fraction is increased by 20% and the denominator is decreased by 5%, the value of the new fraction is 5/2. What is the original fraction?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A student gets an aggregate of 60% marks in five subjects in the ratio 10:9:8:7:6. If the passing marks are 50% of the maximum marks and each subject has the same maximum marks, in how many subjects did he pass the examination?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "The population of a town was 1,60,000 three years ago. If it increased by 3%, 2.5% and 5% respectively in the last three years, what is the present population?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 60% of A's income is equal to 75% of B's income, then B's income is equal to what percent of A's income?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Two numbers are less than a third number by 30% and 37% respectively. By what percentage is the second number less than the first?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "In a certain school, 20% of students are below 8 years of age. The number of students above 8 years of age is 2/3 of the number of students of 8 years of age which is 48. What is the total number of students in the school?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A man spends 35% of his income on food, 25% on children's education and 80% of the remaining on house rent. What percent of his income he is left with?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 20% of (A + B) = 50% of B, then what is the value of (2A - B) / (2A + B)?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A vendor sells 60 percent of apples he had and throws away 15 percent of the remainder. Next day he sells 50 percent of the remainder and throws away the rest. What percent of his apples does the vendor throw?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A's salary is 40% of B's salary which is 25% of C's salary. What percentage of C's salary is A's salary?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If the price of a book is first decreased by 25% and then increased by 20%, what is the net change in the price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "In an election, a candidate who gets 84% of the votes is elected by a majority of 476 votes. What is the total number of votes polled?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Gaurav spends 30% of his monthly income on food articles, 40% of the remaining on conveyance and clothes and saves 50% of the remaining. If his monthly salary is Rs. 18,400, how much money does he save every month?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If the price of a commodity is decreased by 20% and its consumption is increased by 20%, what will be the increase or decrease in expenditure on the commodity?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "The salary of an employee increases every year by 20%. If his salary in the year 2000 was Rs. 26640, what was his salary in 1998?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A is 50% more than B, B is 20% less than C. What is A:C?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "In a library 20% of the books are in Hindi, 50% of the remaining are in English and 30% of the remaining are in French. The rest 6300 books are in regional language. What is the number of books in the library?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A number is increased by 10% and then decreased by 10%. Find the net change.",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A student scored 30% marks and failed by 45 marks. Another student scored 42% marks and got 45 marks more than the passing marks. Find the passing marks.",
+        "skill_tested": "application"
+    },
+    {
+        "question": "The ratio of two numbers is 2:3. If 20% of the larger number is 20, what is 40% of the smaller number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A trader marks his goods at 20% above the cost price. He then sells them at a discount of 20%. What is his loss or gain percent?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A man's wage was reduced by 50%. Again the reduced wage was increased by 50%. Find his loss in percentage.",
+        "skill_tested": "application"
+    },
+    {
+        "question": "In a mixture of 60 litres, the ratio of milk and water is 2:1. If this ratio is to be 1:2, then what is the quantity of water to be further added?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "The population of a town increases by 5% annually. If it is 15435 now, what was it 2 years ago?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If a number x is 10% less than another number y and y is 10% more than 125, then what is the value of x?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Due to a 25% price hike in sugar, a woman can buy 5 kg less for Rs. 100. Find the original price of sugar.",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A shopkeeper cheats to the extent of 10% while buying as well as selling, by using false weights. What is his total gain percent?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 25% expressed as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you write 0.5 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 20%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'percentage point'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1% of 500?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate a percentage decrease between two numbers?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 150% of 100?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Express the fraction 1/5 as a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What does a 100% increase in a value signify?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 12.5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Explain why a 20% increase followed by a 20% decrease results in a net loss.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe a real-world situation where calculating a percentage is essential.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a product's price is reduced by 30%, what percentage increase is needed to return to the original price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it misleading to average two percentages without considering their base values?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a value is halved, what is the percentage decrease?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A shirt is on sale for $30, which is 25% off the original price. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A company's profits grew from $200,000 to $235,000. What was the percentage increase?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Calculate a 15% tip on a restaurant bill of $85.",
+        "skill_tested": "application"
+    },
+    {
+        "question": "In a class of 40 students, 8 were absent. What percentage of the class was present?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "You invest $1,200 at a simple interest rate of 4% per year. How much interest is earned after 5 years?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A team won 15 out of 25 games. What is their win percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A product costs $150. A 7% sales tax is added. What is the final cost?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 8% of a number is 24, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A car's value depreciates from $25,000 to $21,000 in one year. What is the percentage depreciation?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "An employee's salary of $50,000 is increased by 3.5%. What is the new salary?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 40% expressed as a fraction in its simplest form?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "To convert a percentage to a decimal, you divide by what number?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 10% of 250?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Express 3/5 as a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal equivalent of 2.5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'interest rate'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 75% of 200?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you write 1.25 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the formula for a percentage increase?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.1% of 1000?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Explain how a 10% increase in both the length and width of a rectangle affects its area.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is 'percent' often called 'parts per hundred'?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a city's population increases by 10% one year and 20% the next, why is the total increase not 30%?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe a method to quickly estimate 20% of a bill amount.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a number is decreased by 100%, what is the final value?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it important to know if interest is simple or compounded?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If an item is marked '50% off', and you get an additional 50% off the sale price, is the item free? Explain.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the meaning of a stock's value increasing by 200%.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "How can you determine the original price of an item if you only know the sale price and the discount percentage?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a recipe is scaled down by 50%, what happens to the quantity of each ingredient?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A store offers a 30% discount on a laptop priced at $1200. What is the final sale price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A survey of 500 people found that 350 of them own a car. What percentage of people surveyed own a car?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A restaurant bill is $125. The sales tax is 8%. What is the total amount to be paid?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "An investment of $3000 earns a simple interest of 6% per year. What is the total value of the investment after 4 years?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "The number of students in a school decreased from 850 to 765 in one year. What was the percentage decrease?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A mixture contains 15% alcohol. How much alcohol is in a 500 ml container of the mixture?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 45% of the students in a school are boys, and there are 275 girls, what is the total number of students?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A product is bought for $80 and sold for $104. What is the percentage profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A runner has completed 4.5 km of a 10 km race. What percentage of the race is left to run?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A company has 120 employees. 25% of them are in the marketing department. How many employees are not in marketing?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 120% of 75?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Convert 1.5 to a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 3/8 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If you score 30 out of 40 on a test, what is your percentage score?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the term 'depreciation' in the context of percentages.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A jacket is discounted from $200 to $150. What is the percentage discount?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 0.2% written as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Why does a 100% discount mean the item is free?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A savings account with $2,500 earns 3% compound interest annually. How much will be in the account after 2 years?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 60% of 150?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Define 'sales tax'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a shirt is on a 'buy one, get one 50% off' sale, what is the effective percentage discount on two shirts?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 25% of 20% of 500?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do you calculate the base value if you know a part and its percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A company's revenue was $5 million. It is projected to increase by 12% next year. What is the projected revenue?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 99% as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Explain why a 10% increase followed by a 10% decrease is a different outcome than a 10% decrease followed by a 10% increase.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If 150 people out of 200 in a survey prefer a certain brand, what percentage is that?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 5% of 1,500?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How are percentages used to represent data in a pie chart?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is the fraction for 62.5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A recipe needs 2 cups of sugar. You only want to make 75% of the recipe. How much sugar do you need?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If a stock price falls from $50 to $45, what is the percentage decrease?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'margin of error' in the context of percentages.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 200% of 45?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Convert the decimal 0.125 to a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A car was traveling at 80 km/h. The driver increased the speed by 10%. What is the new speed?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 30% of a number is 90, what is 50% of that number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it important to use a consistent base when comparing percentages?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 15% of 300?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A loan of $10,000 has a 5% simple interest rate per year. What is the total amount to be repaid after 3 years?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What does a percentage of 0% represent?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a sales team has a target of $50,000 and they have achieved $42,500, what percentage of the target have they reached?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why can percentages be greater than 100%?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A computer that originally cost $1500 is sold for $900. What is the percentage loss?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 2/3 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A team lost 8 of its 20 games. What percentage of the games did it win?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain how to calculate a tip of 18% without a calculator.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company has a 5% error rate in its production. If it produces 10,000 units, how many are expected to be flawless?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 1% of 1 million?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Define 'annual percentage rate' (APR).",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a price increases from $10 to $12, and then from $12 to $15, which increase is larger in percentage terms?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A phone battery is at 60% and loses 15% of its current charge. What is the new battery percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 70% of 70?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do you express a ratio as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A store increases the price of an item by 50% and then offers a 50% discount. What is the final price compared to the original?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A recipe's ingredient is increased from 100g to 125g. What is the percentage increase?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If you leave a 20% tip on a $45 bill, how much is the tip?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is the difference between a percentage and a percentile?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company's stock falls by 10% on Monday and rises by 10% on Tuesday. What is the net change over the two days?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 5% as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A car is sold for $18,000, which is a 20% loss on the original price. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it often useful to convert percentages to decimals for calculations?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company has 250 employees and 15% of them are part-time. How many are full-time?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 30% of 120?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How can you tell if a percentage change is an increase or a decrease?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a population of 1 million grows by 2% per year, what is the population after one year?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'compounding' in the context of percentage growth.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "An item is priced at $60. With a 5% sales tax, what is the total cost?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 200% of a number is 80, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 10% of 9.9?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A student answered 18 out of 20 questions correctly on a quiz. What was their score as a percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it misleading to compare the number of accidents this year with last year without considering the percentage change?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A product is marked up by 25% from its cost price of $200. What is its selling price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A company's profits increased by 150%. If the original profit was $10,000, what is the new profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 1/3 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A bakery makes 300 cakes. 60% are chocolate. How many are not chocolate?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain how a small percentage of a very large number can be a significant amount.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A TV is sold for $720 after a 10% discount. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 60% as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "To convert a fraction to a percentage, you multiply by what number?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 35%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 10% of 320?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Express 1/3 as a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for the original amount of a loan?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you write 250% as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 50% of 90?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Convert 0.65 to a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What does a 0% increase mean?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a quantity is increased by 200%, how many times the original is it?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain why percentages are a useful way to compare parts of different-sized wholes.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If you know 10% of a number, how can you easily find 5% and 20% of that number?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the relationship between a percentage discount and the final sale price.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If the radius of a circle is increased by 50%, what is the percentage increase in its area?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it not possible to have more than 100% of a physical object?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the difference between 'percent' and 'percentage point' increase.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a business's profit margin is 15%, what does this mean?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why does a 10% increase in salary not feel as significant after a 10% pay cut?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If you get 1/4 of a pizza, what percentage of the pizza do you have?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A book costs $25. With a 6% sales tax, what is the total price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A team won 12 of its 16 games. What is their win percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "An item that costs $300 is sold for $360. What is the percentage profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A survey of 800 people found that 45% preferred brand A. How many people preferred brand A?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "An employee earns $60,000 per year. After a 4% raise, what is their new salary?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 25% of a number is 50, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A flight is 1200 miles long. After flying 750 miles, what percentage of the flight is remaining?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A restaurant bill is $62. You want to leave an 18% tip. How much is the tip?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A school has 500 students. On a particular day, 95% of the students were present. How many students were absent?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 45% of 200?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 90% as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you write 3 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fraction for 37.5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If you get 4 out of 5 questions right, what is your score as a percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the role of the base in a percentage calculation.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A phone's price dropped from $1000 to $850. What was the percentage discount?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 150% written as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Why is a 25% increase not the same as multiplying by 0.25?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A principal of $5000 is invested at 4% compound interest per year. What is the total amount after 3 years?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 75% of 300?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Define 'simple interest'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a shirt is on a 'buy two, get one free' sale, what is the effective percentage discount on three shirts?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 10% of 40% of 1000?",
+        "skill_tested": "application"
+    },
+
+    {
+        "question": "How do you calculate the percentage of a part to a whole?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A company's profits were $2 million. They are expected to decrease by 8% next year. What are the expected profits?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 100% as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Explain why a 5% increase in population has a larger effect on a larger city than on a smaller city.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If 120 people out of 150 passed an exam, what percentage failed?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 2% of 2,500?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do percentages help in comparing data from different sample sizes?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is the fraction for 87.5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A project requires 40 hours of work. If 60% of the work is done, how many hours are left?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If a stock price increases from $20 to $25, what is the percentage increase?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'percentage composition' in chemistry.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 300% of 15?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Convert the decimal 0.375 to a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A train was traveling at 100 km/h. It decreased its speed by 20%. What is the new speed?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 60% of a number is 120, what is 25% of that number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it important to state what a percentage is 'of'?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 25% of 440?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A loan of $20,000 has a 7% simple interest rate per year. What is the total interest paid over 5 years?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What does a percentage of 1% represent?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A sports team has a goal of winning 30 games. They have won 24 games so far. What percentage of their goal have they achieved?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why can percentages be used to represent probabilities?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A property that originally cost $200,000 is sold for $250,000. What is the percentage profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 1/6 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A team played 30 games and won 70% of them. How many games did it lose?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain how to calculate a 25% discount mentally.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A factory has a 2% defect rate. If it produces 5,000 widgets, how many are expected to be defective?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 10% of 2.5 million?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Define 'percentage yield' in a chemical reaction.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a price falls from $100 to $80, and then from $80 to $60, which decrease is larger in percentage terms?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A phone battery is at 50% and loses 20% of its current charge. What is the new battery percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 80% of 90?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do you express a decimal as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A store marks up a product by 100% and then offers a 50% discount. What is the final price compared to the cost price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A recipe's sugar content is increased from 50g to 60g. What is the percentage increase?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If you leave a 15% tip on a $60 bill, how much is the tip?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is the difference between a percentage and a proportion?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company's stock rises by 20% on Monday and falls by 20% on Tuesday. What is the net change over the two days?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 10% as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A car is sold for $15,000, which is a 25% loss on the original price. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it often useful to convert fractions to percentages for comparison?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company has 400 employees and 20% of them are in the sales team. How many are not in sales?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 40% of 150?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How can you tell if a percentage is greater than 100% from its decimal form?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a population of 2 million grows by 1.5% per year, what is the population after one year?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'percentage change' and its formula.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "An item is priced at $80. With a 10% sales tax, what is the total cost?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 300% of a number is 90, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 20% of 19.99?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A student answered 27 out of 30 questions correctly on a test. What was their score as a percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it important to consider the time frame when analyzing percentage growth rates?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A product is marked up by 50% from its cost price of $100. What is its selling price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A company's profits increased by 250%. If the original profit was $20,000, what is the new profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 1/2 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A farm has 500 animals. 80% are chickens. How many are not chickens?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain how a small percentage discount on an expensive item can result in large savings.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A house is sold for $330,000 after a 10% price increase. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 1% of 1 billion?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Define 'percentage point change'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a price doubles, and then doubles again, what is the total percentage increase from the original price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A phone battery is at 90% and loses 10% of its current charge. What is the new battery percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 60% of 60?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do you express a percentage as a ratio?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A store marks up a product by 100% and then offers a 100% discount. What is the final price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A recipe's salt content is decreased from 10g to 8g. What is the percentage decrease?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If you leave a 25% tip on a $50 bill, how much is the tip?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is the difference between a percentage and a raw score?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company's stock falls by 50% on Monday and rises by 50% on Tuesday. What is the net change over the two days?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 15% as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A car is sold for $22,000, which is a 20% profit on the original price. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it often useful to convert all values to a common unit before calculating percentages?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company has 600 employees and 30% of them are in the engineering team. How many are not in engineering?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 50% of 180?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How can you tell if a percentage is less than 1% from its decimal form?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a population of 3 million grows by 0.5% per year, what is the population after one year?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'percentage error' and its formula.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "An item is priced at $120. With a 2.5% sales tax, what is the total cost?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 400% of a number is 120, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 30% of 19.95?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A student answered 45 out of 50 questions correctly on a final exam. What was their score as a percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it important to consider the context when interpreting a percentage?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A product is marked up by 200% from its cost price of $50. What is its selling price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A company's profits increased by 500%. If the original profit was $5,000, what is the new profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 1/10 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A library has 1,000 books. 75% are fiction. How many are non-fiction?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain how a large percentage of a very small number can be an insignificant amount.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A phone is sold for $990 after a 10% price increase. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 80% as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal equivalent of 1/4?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate a percentage of a number?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 10% of 50?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Express 7/10 as a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for a percentage of a sale given to a salesperson?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you write 0.005 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 20% of 200?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Convert 1.75 to a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What does a 50% increase mean in relation to the original value?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a quantity is quadrupled, what is the percentage increase?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain why percentages are useful for comparing statistics from different-sized groups.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If you know 25% of a number, how can you easily find 75% of that number?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the relationship between a percentage markup and the final selling price.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If the side length of a cube is increased by 10%, what is the approximate percentage increase in its volume?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it possible to have a percentage increase of more than 100%?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the difference between 'simple interest' and 'compound interest' using a real-world example.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a company's profit margin is -5%, what does this signify?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why does a 20% increase followed by a 25% decrease not return to the original value?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If you ate 3/8 of a pie, what percentage of the pie is left?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A shirt costs $50. With a 5% sales tax, what is the total price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A team lost 9 of its 20 games. What is their win percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "An item that costs $200 is sold for $250. What is the percentage profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A survey of 1200 people found that 65% enjoyed a movie. How many people did not enjoy it?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "An employee earns $75,000 per year. After a 2% raise, what is their new salary?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 40% of a number is 80, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A marathon is 42 km long. After running 30 km, what percentage of the race is remaining?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A restaurant bill is $90. You want to leave a 15% tip. How much is the total bill?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A university has 10,000 students. On a snowy day, 88% of the students attended class. How many students were absent?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 35% of 400?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 1% as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you write 4.5 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fraction for 66.67%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If you get 15 out of 25 questions right, what is your score as a percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'percentage points' using an example.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A laptop's price dropped from $1500 to $1200. What was the percentage discount?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 200% written as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Why is a 50% increase not the same as adding 50 to a number?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A principal of $8000 is invested at 5% compound interest per year. What is the total amount after 2 years?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 65% of 200?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Define 'compound interest'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a product is on a 'buy three, get one free' sale, what is the effective percentage discount on four items?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 25% of 10% of 800?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do you calculate the 'whole' if you know a 'part' and its percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A company's revenue was $3 million. It is expected to increase by 15% next year. What are the expected revenues?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 2% as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Explain why a 2% growth rate has a much larger impact over 50 years than a 1% growth rate.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If 90 people out of 120 are right-handed, what percentage are left-handed?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 4% of 1,500?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do percentages help in understanding financial reports?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is the fraction for 12.5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A project is estimated to take 80 hours. If 30% of the time has been spent, how many hours are left?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If a stock price decreases from $80 to $70, what is the percentage decrease?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'inflation' using percentages.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 400% of 25?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Convert the decimal 0.875 to a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A bicycle was traveling at 20 km/h. The rider increased the speed by 25%. What is the new speed?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 70% of a number is 140, what is 30% of that number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it important to use a consistent time period when comparing percentage changes?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 15% of 500?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A loan of $5,000 has a 4% simple interest rate per year. What is the total interest paid over 6 years?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What does a percentage of 50% represent?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A team has a goal of scoring 40 points. They have scored 32 points so far. What percentage of their goal have they achieved?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why can percentages be used to represent the composition of a mixture?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A house that originally cost $300,000 is sold for $360,000. What is the percentage profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 5/8 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A team played 40 games and won 65% of them. How many games did it lose?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain how to calculate a 15% discount mentally.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A factory has a 1.5% defect rate. If it produces 20,000 items, how many are expected to be defective?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 5% of 3 million?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Define 'return on investment' (ROI) in percentage terms.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a price increases from $20 to $30, and then from $30 to $40, which increase is larger in percentage terms?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A phone battery is at 40% and loses 25% of its current charge. What is the new battery percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 90% of 110?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do you express a percentage as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A store marks up a product by 50% and then offers a 20% discount. What is the final price compared to the cost price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A recipe's flour content is decreased from 200g to 150g. What is the percentage decrease?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If you leave a 20% tip on a $75 bill, what is the total amount?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is the difference between a percentage change and a percentage of the whole?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company's stock falls by 10% on Monday and rises by 15% on Tuesday. What is the net change over the two days?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 30% as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A car is sold for $24,000, which is a 20% profit on the original price. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it often useful to convert all fractions to percentages for comparison?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company has 800 employees and 15% of them are in the research team. How many are not in research?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 60% of 250?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How can you tell if a percentage is between 1% and 100% from its decimal form?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a population of 5 million grows by 2.5% per year, what is the population after one year?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'successive percentage change'.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "An item is priced at $150. With a 5.5% sales tax, what is the total cost?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 500% of a number is 200, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 40% of 29.99?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A student answered 36 out of 40 questions correctly on a final exam. What was their score as a percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it important to consider the sample size when interpreting a percentage?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A product is marked up by 150% from its cost price of $20. What is its selling price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A company's profits increased by 400%. If the original profit was $10,000, what is the new profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 1/20 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A museum has 2,000 artifacts. 60% are from ancient civilizations. How many are not?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain how a large percentage of a very small number can be an insignificant amount.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A phone is sold for $880 after a 20% discount. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 0.5% of 10,000?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Define 'percentage difference'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a price is halved, and then halved again, what is the total percentage decrease from the original price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A phone battery is at 80% and loses 25% of its current charge. What is the new battery percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 70% of 120?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do you express a percentage as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A store marks up a product by 200% and then offers a 50% discount. What is the final price compared to the cost price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A recipe's water content is increased from 100ml to 120ml. What is the percentage increase?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If you leave a 10% tip on a $150 bill, how much is the tip?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is the difference between a percentage and a frequency count?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company's stock falls by 25% on Monday and rises by 25% on Tuesday. What is the net change over the two days?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 5% as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A car is sold for $26,000, which is a 30% profit on the original price. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it often useful to convert percentages to a common denominator for comparison?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company has 1,000 employees and 40% of them are in the production team. How many are not in production?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 70% of 300?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How can you tell if a percentage is greater than 1% from its decimal form?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a population of 6 million grows by 0.2% per year, what is the population after one year?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'percentage points difference' and its formula.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "An item is priced at $200. With a 7.5% sales tax, what is the total cost?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 600% of a number is 180, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 50% of 49.98?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A student answered 68 out of 80 questions correctly on a final exam. What was their score as a percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it important to consider the margin of error when interpreting a percentage?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A product is marked up by 300% from its cost price of $10. What is its selling price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A company's profits increased by 600%. If the original profit was $2,000, what is the new profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 1/50 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A zoo has 400 animals. 25% are mammals. How many are not mammals?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain how a small percentage of a very large population can be a significant number of people.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A tablet is sold for $450 after a 10% price increase. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 95% as a fraction in simplest form?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal equivalent of 3/4?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate a percentage loss?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 20% of 75?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Express 5/8 as a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for an additional percentage charge on goods and services?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you write 0.015 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 30% of 300?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Convert 2.25 to a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What does a 25% decrease mean in relation to the original value?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a quantity is quintupled, what is the percentage increase?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain why percentages are often used in news reports about the economy.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If you know 20% of a number, how can you easily find 60% of that number?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the relationship between a percentage commission and a salesperson's earnings.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If the diameter of a circle is decreased by 20%, what is the percentage decrease in its circumference?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it important to check if a percentage is of the original value or the new value?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the difference between 'markup' and 'profit margin' using percentages.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a company's market share goes from 10% to 12%, what is the percentage point increase and what is the percentage increase?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why does a 30% increase followed by a 30% increase not equal a 60% increase?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If you completed 2/3 of a project, what percentage of the project is left?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A pair of shoes costs $80. With an 8% sales tax, what is the total price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A team won 14 of its 35 games. What is their win percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "An item that costs $150 is sold for $180. What is the percentage profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A survey of 900 people found that 25% were undecided. How many people were undecided?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "An employee earns $45,000 per year. After a 5% raise, what is their new salary?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 60% of a number is 90, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A book has 300 pages. You have read 120 pages. What percentage of the book is unread?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A restaurant bill is $110. You want to leave a 20% tip. How much is the total bill?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A company has 1,500 employees. On a given day, 98% were present. How many employees were absent?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 55% of 200?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 4% as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you write 5 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fraction for 16.67%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If you get 35 out of 50 questions right, what is your score as a percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'percentage' in relation to a whole.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A car's price dropped from $30,000 to $27,000. What was the percentage discount?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 350% written as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Why is a 10% discount on a $100 item different from a 100% discount on a $10 item?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A principal of $10,000 is invested at 6% compound interest per year. What is the total amount after 3 years?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 85% of 400?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Define 'principal' in finance.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a product is 'buy one, get one 25% off', what is the effective percentage discount on two items?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 30% of 20% of 600?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do you calculate the 'part' if you know the 'whole' and the percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A company's revenue was $1.5 million. It is expected to grow by 20% next year. What is the expected revenue?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 8% as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Explain why a 1% difference in interest rates can lead to a large difference in savings over time.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If 150 people out of 250 are satisfied with a service, what percentage are not satisfied?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 6% of 3,000?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do percentages help in understanding survey results?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is the fraction for 33.33%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A project is estimated to take 120 hours. If 40% of the time has been spent, how many hours are left?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If a stock price increases from $120 to $150, what is the percentage increase?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'body fat percentage'.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 500% of 10?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Convert the decimal 0.075 to a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A helicopter was flying at 150 km/h. It increased its speed by 30%. What is the new speed?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 80% of a number is 240, what is 15% of that number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it important to use a consistent unit of measurement when calculating percentages?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 5% of 800?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A loan of $8,000 has a 3% simple interest rate per year. What is the total interest paid over 4 years?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What does a percentage of 75% represent?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A team has a goal of winning 50 games. They have won 35 games so far. What percentage of their goal have they achieved?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why can percentages be used to represent the concentration of a solution?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A car that originally cost $40,000 is sold for $32,000. What is the percentage loss?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 3/10 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A team played 50 games and won 80% of them. How many games did it lose?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain how to calculate a 10% tip mentally and then adjust for a 20% tip.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A factory has a 0.5% defect rate. If it produces 100,000 units, how many are expected to be defective?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 2% of 5 million?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Define 'percentile rank'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a price increases from $50 to $75, and then from $75 to $100, which increase is larger in percentage terms?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A phone battery is at 30% and loses 50% of its current charge. What is the new battery percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 80% of 150?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do you express a percentage as a ratio in simplest form?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A store marks up a product by 150% and then offers a 50% discount. What is the final price compared to the cost price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A recipe's butter content is decreased from 80g to 60g. What is the percentage decrease?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If you leave a 20% tip on a $120 bill, what is the total amount?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is the difference between a percentage and a percentage point?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company's stock falls by 20% on Monday and rises by 30% on Tuesday. What is the net change over the two days?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 40% as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A car is sold for $30,000, which is a 25% profit on the original price. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it often useful to convert all numbers to a common format (like decimals) before performing calculations?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company has 1,200 employees and 10% of them are in the finance team. How many are not in finance?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 80% of 400?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How can you tell if a percentage represents a value greater than the whole from its fraction form?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a population of 10 million grows by 0.1% per year, what is the population after one year?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'successive discounts' and how to calculate the final price.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "An item is priced at $300. With a 6.5% sales tax, what is the total cost?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 700% of a number is 210, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 60% of 14.99?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A student answered 72 out of 80 questions correctly on a final exam. What was their score as a percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it important to cite the source of a percentage statistic?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A product is marked up by 250% from its cost price of $30. What is its selling price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A company's profits increased by 1000%. If the original profit was $1,000, what is the new profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 1/100 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A zoo has 600 animals. 35% are reptiles. How many are not reptiles?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain how a small percentage error can become a large absolute error for a large measurement.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A tablet is sold for $550 after a 10% price increase. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 0.1% of 50,000?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Define 'percentage error'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a price is reduced by 25%, and then the new price is reduced by 25%, what is the total percentage decrease from the original price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A phone battery is at 70% and loses 30% of its current charge. What is the new battery percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 90% of 250?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How do you express a ratio in the form of a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A store marks up a product by 300% and then offers a 75% discount. What is the final price compared to the cost price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A recipe's sugar content is increased from 150g to 180g. What is the percentage increase?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If you leave a 15% tip on a $200 bill, how much is the tip?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is the difference between a percentage and a rate?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company's stock falls by 30% on Monday and rises by 40% on Tuesday. What is the net change over the two days?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 60% as a fraction in simplest form?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A car is sold for $40,000, which is a 25% profit on the original price. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it important to understand the base when calculating percentage of a percentage?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A company has 2,000 employees and 5% of them are managers. How many are not managers?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 90% of 500?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "How can you tell if a percentage is a whole number from its fraction form?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "If a population of 8 million grows by 0.5% per year, what is the population after two years?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain the concept of 'percentage points' with an example.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "An item is priced at $400. With a 4.5% sales tax, what is the total cost?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "If 800% of a number is 240, what is the number?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 70% of 29.95?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A student answered 85 out of 100 questions correctly on a final exam. What was their score as a percentage?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Why is it important to be skeptical of statistics presented as percentages without context?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A product is marked up by 400% from its cost price of $5. What is its selling price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "A company's profits increased by 800%. If the original profit was $5,000, what is the new profit?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "What is 1/25 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "A farm has 800 animals. 15% are goats. How many are not goats?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain how a large percentage of a small number can be an insignificant amount.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "A tablet is sold for $660 after a 10% price increase. What was the original price?",
+        "skill_tested": "application"
+    },
+    {
+        "question": "Explain why a 10% increase followed by a 10% decrease results in a value lower than the original.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the difference in effect between a 50% discount and a 'buy one, get one free' offer.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If an investment grows by 10% each year, why is the total growth after 5 years more than 50%?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the relationship between percentages, fractions, and decimals using a real-world example.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it incorrect to average the percentages of two different groups without considering the size of each group?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a product's price is reduced by 20%, by what percentage must the new price be raised to return to the original price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe what a '150% increase' in a company's profit actually means for its value.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why does the base value matter when you are comparing two different percentage changes?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how a small percentage of a very large number can be a very significant amount.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a team wins 60% of its games, what does this imply about the percentage of games it did not win, assuming no draws?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is a 100% profit the same as doubling your money, but a 100% loss means losing all your money?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the concept of 'percentage points' and how it differs from a simple percentage change.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If the length and width of a rectangle are both increased by 20%, why is the area not increased by 20%?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe a scenario where a percentage decrease is a positive outcome.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it easier to mentally calculate 10% of a number before calculating 15% or 5%?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a population grows by 5% every year, is the absolute number of people added each year constant? Explain why or why not.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the logic behind reverse percentage calculations, such as finding the original price after a discount.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a recipe calls for 20% sugar, how would you describe the amount of non-sugar ingredients as a percentage?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why can a percentage error be larger than 100%?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the difference between simple interest and compound interest in terms of how the principal amount is treated.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a store offers a 20% discount and then adds a 20% tax, is the final price the same as the original? Explain.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how percentages are used to represent the concentration of a chemical solution.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a value is reduced to 75% of its original amount, what was the percentage decrease?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it important to know the time frame when analyzing a percentage growth rate?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the concept of a 'majority' using percentages.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a company's market share increases from 2% to 3%, why is this a 50% increase in market share?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe how to estimate a 15% tip on a bill without using a calculator.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a value is increased by 100%, what does that mean in terms of its new size compared to the old?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the difference between a percentage and a percentile.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it often clearer to say 'the rate doubled' instead of 'the rate increased by 100%'?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a price is halved, what is the percentage discount?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how a 10% sales tax is calculated and added to a final bill.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a team has a 25% chance of winning a game, what is their chance of not winning?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe why a 5% mortgage rate is significantly different from a 6% rate over the life of a loan.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a number is reduced by 100%, what is the result?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the meaning of 'profit margin' in percentage terms.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a battery loses 10% of its remaining charge each hour, does it ever fully run out? Explain.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe how percentages are used to express nutritional information on food labels.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If you get 1/3 of the votes in an election with three candidates, what percentage of votes did you get?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain why 'buy two, get one 50% off' is not a 50% discount on the total purchase.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a company's stock value drops by 50% and then increases by 50%, is it back to its original value? Explain.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it important to know the sample size when interpreting a percentage from a survey?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the relationship between the 'part', the 'whole', and the 'percentage'.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a value increases from 50 to 100, and another value increases from 500 to 550, which had a larger percentage increase?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the concept of 'depreciation' using percentages.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it that a 20% increase in a number is equivalent to multiplying it by 1.20?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a team's winning percentage is 75%, what does that tell you about the ratio of their wins to losses?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the difference between a percentage and a proportion.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a mixture is 40% alcohol, what percentage of it is not alcohol?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why can a small percentage change in a country's GDP represent a huge amount of money?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how to determine the original quantity if you know it increased by 25% to become 150.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a square's side length is decreased by 10%, what is the percentage decrease in its perimeter?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe a situation where a percentage would be a more useful measure than a raw number.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain why a 25% discount is equivalent to paying 75% of the price.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a class is 60% female, what is the ratio of females to males?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is 'compounding' such a powerful concept in finance, explained in terms of percentages?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a volume of water freezes and expands by 9%, what does this mean for the new volume?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how 'percentage points' are used to describe changes in interest rates.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a number is increased by 50% and then the new number is decreased by 50%, is the result the same as the original? Why not?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe how to convert a ratio, like 3:5, into a percentage.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If 5% of a city's population moves away, why is the percentage of the remaining population who are original residents not 95%?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the concept of 'successive percentage changes'.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If you mix a solution that is 10% salt with one that is 20% salt, why is the final concentration not simply 15%?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe what '100% pure' means in a practical sense.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain why it is important to clearly state what the percentage is 'of'.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a team won 50% of its first 20 games and 75% of its next 20 games, what is its overall win percentage?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why does a 1% error in a large measurement (like the distance to the moon) represent a huge absolute error?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how percentages can be used to represent the composition of air.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a value is reduced by 10%, it becomes 90. What was the original value? Explain the logic.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe a scenario where a high percentage is not necessarily a good thing.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If the price of an item is increased by 200%, how many times the original price is the new price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain why a 'buy one, get one 75% off' deal is better than a flat 30% off two items.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If the length of a rectangle is increased by 25% and the width is decreased by 20%, what is the net percentage change in area?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it important to consider the starting point when evaluating percentage change over time?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the concept of 'percentage yield' in a manufacturing process.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If 30% of a group are adults, what can you say about the percentage of non-adults in the group?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is a 10 percentage point increase from 40% to 50% also a 25% increase?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how a company can have a 20% increase in revenue but a 10% decrease in profit.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a value is divided by 2, what is the percentage decrease?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the relationship between the discount percentage and the fraction of the price paid.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is a 5% inflation rate considered significant for an economy?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If 70% of a liquid evaporates, what percentage of the original liquid remains?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how to determine if a discount of $20 is better than a discount of 20%.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a number is multiplied by 1.5, what is the percentage increase?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is a 2% chance of failure in a critical system (like a rocket launch) considered very high?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the concept of 'statistical significance' in relation to percentage differences.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If you get 2/5 of a task done, what percentage is left to do?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe how percentages are used to allocate resources in a budget.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a price increases by 10% and then by another 20%, why is the total increase not 30%?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the difference between a 10% markup and a 10% profit margin.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a value is reduced by 1%, what percentage of the original value remains?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it important to use percentages when comparing the performance of investments with different initial amounts?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a pie chart shows that 45% of people prefer Brand A, what does that imply about the remaining percentage?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how to calculate the original amount if you know it was reduced by 15% to $170.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a company's costs are 80% of its revenue, what is its profit margin as a percentage of revenue?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why can adding a constant value to a set of numbers change their percentage differences?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a product is 99% effective, what does that imply about its failure rate as a percentage?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the concept of 'percentage composition by mass' in a compound.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If the chance of rain is 30%, what is the chance of it not raining?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is a 10% increase in a small number a smaller absolute change than a 5% increase in a very large number?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how to find the percentage of a number that another number represents.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a value is increased by 300%, how many times larger is the new value than the original?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the process of converting a percentage to a decimal and explain why it works.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a store offers 'up to 70% off', does that mean every item is 70% off? Explain.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is a 50% increase in a company's small workforce a smaller number of people than a 5% increase in a large company's workforce?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how percentages can be used to represent the slope of a hill.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a number is multiplied by 0.95, what is the percentage decrease?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the logic of using a 'benchmark' percentage for comparison.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it important to have a large and representative sample when reporting survey percentages?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a student's score improved from 60% to 75%, what is the percentage point increase?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how a 10% down payment on a house purchase is calculated.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a product's ingredients are listed by percentage, what should all the percentages add up to?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it that a 10% decrease in a price is a smaller amount of money than the 10% increase needed to return to the original price?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the concept of 'Annual Percentage Rate' (APR) for a loan.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a solution is diluted by adding water, what happens to the percentage concentration of the solute?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe a scenario where a percentage increase of over 1000% is possible.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why does a 2% cash back offer on a credit card result in savings?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a group is 40% children and 60% adults, and 50% of the children are boys, what percentage of the total group are boys?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how to calculate the percentage of a circle that a sector with a given angle represents.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a stock loses 90% of its value, what percentage increase is needed to recover its original value?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it misleading to compare raw numbers of successes without converting them to percentages?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If you get a 5% raise every year, will the amount of your raise be the same each year? Explain.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the role of percentages in calculating Body Mass Index (BMI).",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a value is multiplied by 3, what is the percentage increase?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how percentages are used in weather forecasting (e.g., '30% chance of rain').",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a government's budget deficit is 5% of GDP, what does that mean?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is it that reducing a value by 50% is the same as finding 50% of it?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the concept of 'margin of error' in polls and surveys, which is often expressed as a percentage.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a number is increased by 10%, and the result is then decreased by 10%, why is the final number smaller than the original?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe how to find what percentage one number is of another.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a company's sales are 120% of its target, what does that mean?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is a 10% increase on a larger number a bigger absolute increase than a 20% increase on a smaller number?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain the concept of 'percentage points' using an example of changing interest rates.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If 2/5 of a group are boys, what percentage are girls?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Describe the logic of using percentages to represent the nutrient breakdown in food.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Why is a 50% increase not the same as a 50 percentage point increase?",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "Explain how to calculate the total amount if you know a part that represents 20% of it.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "If a battery's capacity degrades by 5% each year, is the amount of degradation constant each year? Explain.",
+        "skill_tested": "grasping"
+    },
+    {
+        "question": "What is 10% as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you convert a decimal to a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fraction for 25%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 100% of a number?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'principal' in the context of simple interest.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the formula for calculating a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Express 0.75 as a percentage.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 50% as a fraction in its simplest form?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate a discount amount?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What does 'per annum' mean?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal equivalent of 200%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'sales tax'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1/10 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you write a percentage as a fraction?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for the extra money earned on an investment?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.05 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the formula for a percentage increase?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'markup'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 3/4 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you find 1% of a number?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'percentage decrease'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1.5 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 10%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How is simple interest calculated?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for the percentage of a sale paid to an agent?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.001 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'profit percentage'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 2/5 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you find 10% of a number mentally?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 99%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the formula for percentage error?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 300% as a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'loss percentage'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1/8 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you convert a percentage to a decimal?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for the original price of an item before a discount?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.4 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'compound interest'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 75%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate the final price after a discount?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 150%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1/2 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'Annual Percentage Rate' (APR).",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.12 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for the total amount of a loan that is repaid?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 40%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate the amount of tax on an item?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.025 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'depreciation'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 3/10 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you express a ratio as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 7.5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the formula for finding the part when you know the whole and the percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'percentage composition'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 5/8 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate a tip amount?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.333... as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'percentage point change'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 60%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the formula for finding the whole when you know a part and its percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1.05 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'percentile'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1/3 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you express a percentage as a ratio?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 0.5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for the percentage of liquid that evaporates from a solution?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 4/5 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'successive percentage change'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 2.0 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 80%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate percentage profit on cost price?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.08 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'percentage yield'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 5/4 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate percentage of an amount?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 125%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for a reduction in price, expressed as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1/20 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'commission rate'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 3.5 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 12.5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate the percentage of a total?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.6 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'inflation rate'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1/50 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you convert a fraction to a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 22%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for the percentage by which a product's price is increased over its cost?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1/4 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'rate of return'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 4.0 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 30%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate the percentage of a quantity?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.15 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'interest' in financial terms.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1/100 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you express a part of a whole as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 85%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for the percentage of a population that has a certain characteristic?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 7/8 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'growth rate'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.002 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate the final amount after a percentage increase?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.55 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'margin of error'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 2/3 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate the original amount before a percentage decrease?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 4.5%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for the percentage of a substance in a mixture?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 3/5 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'discount rate'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 6.0 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 90%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate percentage loss on cost price?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.3 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'tax rate'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 1/25 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate the percentage of a value?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 33%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for a part of a whole, expressed in hundredths?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 5/6 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'failure rate'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.007 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 15%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate the final amount after a percentage decrease?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.95 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'success rate'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 3/8 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate the original amount before a percentage increase?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the decimal for 6.25%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the term for the percentage of a total that a part represents?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 4/10 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'tip percentage'.",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 8.0 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is the fractional equivalent of 70%?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "How do you calculate percentage of a total value?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "What is 0.8 as a percentage?",
+        "skill_tested": "learning"
+    },
+    {
+        "question": "Define 'down payment percentage'.",
+        "skill_tested": "learning"
+    }
+]

@@ -100,6 +100,34 @@ const Dashboard = () => {
               </div>
             </div>
 
+            {/* Practice / Test cards */}
+            <div className="flex flex-col sm:flex-row gap-6 mb-12">
+              <div className="bg-[#2a0a44] rounded-2xl p-6 w-56 text-center shadow-md">
+                <h3 className="font-bold text-xl mb-2">GENERATED QUESTIONS</h3>
+                <p className="text-sm text-gray-300 mb-4">
+                  Practice infinitely with our AI Question generator model.
+                </p>
+                <Link to="/generatedS">
+                  <button className="px-6 py-2 bg-[#AE75D8] text-[#2a0a44] font-bold rounded-full hover:bg-yellow-500 transition-all duration-300 shadow-[0_0_15px_5px_#AE75D8] shadow-[#AE75D8]/50 hover:shadow-xl hover:shadow-yellow-500/50 animate-pulse hover:animate-none">
+                    GENERATE!
+                  </button>
+                </Link>
+              </div>
+
+              <div className="bg-[#2a0a44] rounded-2xl p-6 w-56 text-center shadow-md">
+                <h3 className="font-bold text-xl mb-2">um</h3>
+                <p className="text-sm text-gray-300 mb-4">
+                  What should go here
+                </p>
+                <br />
+                <Link to="/test">
+                  <button className="px-6 py-2 bg-[#8AE08A] text-[#221149] font-bold rounded-full hover:bg-green-500">
+                    IDK
+                  </button>
+                </Link>
+              </div>
+            </div>
+
             {/* History (button links to /testhistory page maybe) */}
             <div className="w-full">
               <h3 className="text-4xl font-bold mb-2 text-left">History</h3>

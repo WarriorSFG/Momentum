@@ -4,11 +4,13 @@ import Landing from './pages/landing.jsx'
 import Signup from './pages/signup.jsx'
 import Dashboard from './pages/dashboard.jsx'
 import Test from './pages/test.jsx'
-import PracticeS from './pages/practiceS.jsx'
 import PracticeQ from './pages/practiceQ.jsx'
 import PracticeA from './pages/practiceA.jsx'
 import TestHistory from './pages/TestHistory.jsx'
 import TestQ from './pages/TestQ.jsx'
+import PracticeS from './pages/practiceS.jsx'
+import GeneratedS from './pages/GeneratedS.jsx'
+import GeneratedQ from './pages/generatedQ.jsx'
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
       <Route path="/testhistory" element={<TestHistory />} />
       <Route path="/test" element={<Test />}/>
       <Route path="/testQ" element={<TestQ />}/>
+      <Route path='/generatedS' element={<GeneratedS />}/>
+      <Route path="/generatedQ" element={<GeneratedQ />}/>
       <Route path="/practiceS" element={<PracticeS />}/>
       <Route path="/practiceQ" element={<PracticeQ />}/>
       <Route path="/practiceA" element={<PracticeA />}/>

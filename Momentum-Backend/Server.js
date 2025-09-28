@@ -7,6 +7,7 @@ const bcryptjs = require('bcryptjs')
 require('dotenv').config()
 const cors = require('cors')
 
+const { questionTemplates } = require('./QuestionGenerator.js');
 const port = process.env.PORT
 const URL = process.env.MONGOURL
 const app = express()
@@ -57,7 +58,7 @@ const testSchema = new mongoose.Schema({
 
 const practiceSchema = new mongoose.Schema({
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
-  questionID: String,
+  questionID: { type: mongoose.Schema.Types.ObjectId, ref: 'Question' },
   correct: Boolean,
   timeTaken: { type: Number, required: true }
 });
@@ -142,30 +143,100 @@ app.post('/login', async (req, res) => {
   }
 })
 
-
 // ====== Stats ======
 app.get('/stats', verifyToken, async (req, res) => {
   try {
-    const tests = await Test.find({ user: req.user.id })
-    const practices = await Practice.find({ user: req.user.id }) 
+    const tests = await Test.find({ user: req.user.id });
 
-    // total
-    const totalQ = practices.length
-    const correct = practices.filter(p => p.correct).length
-    const incorrect = totalQ - correct
+    // 1. Fetch practices and populate the question's type field
+    const practices = await Practice.find({ user: req.user.id })
+      .populate({
+        path: 'questionID',
+        select: 'type'
+      });
 
+    // --- Basic Stats ---
+    const totalQ = practices.length;
+    const correct = practices.filter(p => p.correct).length;
+    const incorrect = totalQ - correct;
+
+    // --- Skill Calculation ---
+    const skillCounts = {
+      learning: { total: 0, correct: 0 },
+      grasping: { total: 0, correct: 0 },
+      application: { total: 0, correct: 0 }
+    };
+
+    // 2. Tally correct/total attempts for each skill
+    practices.forEach(p => {
+      // Use optional chaining in case a question was deleted
+      const skill = p.questionID?.type;
+      if (skill && skillCounts[skill]) {
+        skillCounts[skill].total++;
+        if (p.correct) {
+          skillCounts[skill].correct++;
+        }
+      }
+    });
+
+    // 3. Calculate accuracy for each skill (0 to 1)
+    const learningAcc = skillCounts.learning.total > 0 ? (skillCounts.learning.correct / skillCounts.learning.total) : 0;
+    const graspingAcc = skillCounts.grasping.total > 0 ? (skillCounts.grasping.correct / skillCounts.grasping.total) : 0;
+    const applicationAcc = skillCounts.application.total > 0 ? (skillCounts.application.correct / skillCounts.application.total) : 0;
+
+    // 4. Normalize these accuracies to sum to 80 for the pie chart
+    const totalAccuracySum = learningAcc + graspingAcc + applicationAcc;
+    let learningScore = 0, graspingScore = 0, applicationScore = 0;
+
+    if (totalAccuracySum > 0) {
+      learningScore = (learningAcc / totalAccuracySum) * 80;
+      graspingScore = (graspingAcc / totalAccuracySum) * 80;
+      applicationScore = (applicationAcc / totalAccuracySum) * 80;
+    }
+    // --- Retention Calculation ---
+    const practicesByQuestion = {};
+    practices.forEach(p => {
+      const qId = p.questionID?._id.toString();
+      if (qId) {
+        if (!practicesByQuestion[qId]) practicesByQuestion[qId] = [];
+        practicesByQuestion[qId].push(p.correct);
+      }
+    });
+
+    let totalRepeatedAttempts = 0;
+    let correctRepeatedAttempts = 0;
+
+    for (const qId in practicesByQuestion) {
+      const attempts = practicesByQuestion[qId];
+      // Only consider questions that were actually repeated
+      if (attempts.length > 1) {
+        totalRepeatedAttempts += attempts.length;
+
+        // Count how many of those attempts were correct
+        const correctCount = attempts.filter(isCorrect => isCorrect === true).length;
+        correctRepeatedAttempts += correctCount;
+      }
+    }
+
+    const retentionScore = totalRepeatedAttempts > 0
+      ? (correctRepeatedAttempts / totalRepeatedAttempts) * 20
+      : 0;
     res.json({
       message: "success",
       questions: { total: totalQ, correct, incorrect },
       teststaken: tests.length,
       skills: {
-        learning: 25, grasping: 25, retention: 25, application: 25 // placeholder
+        learning: Math.round(learningScore),
+        grasping: Math.round(graspingScore),
+        application: Math.round(applicationScore),
+        retention: Math.round(retentionScore)
       }
-    })
-  } catch {
-    res.status(400).json({ error: 'Bad request' })
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(400).json({ error: 'Bad request' });
   }
-})
+});
 
 
 // ====== Start Test ======
@@ -204,7 +275,7 @@ app.post('/testsubmit', verifyToken, async (req, res) => {
     test.questions.forEach((question, index) => {
       const userAnswer = answers[index];
       const isAnswered = userAnswer && userAnswer.answer !== null;
-      
+
       // Calculate score
       const isCorrect = isAnswered && userAnswer.answer === question.answer;
       if (isCorrect) {
@@ -274,15 +345,15 @@ app.post('/practicequestion', verifyToken, async (req, res) => {
     // 1. Destructure the new 'difficulty' field from the body
     const { subject, chapters, difficulty } = req.body;
 
-    // Get the current user's solved question IDs (no change here)
+    // Get the current user's solved question IDs
     const user = await User.findById(req.user.id).select('solvedQuestions');
     const solvedIds = user ? user.solvedQuestions : [];
 
-    // 2. Build the base query object
+    // 2.The base query object
     const query = {
       subject,
       chapter: { $in: chapters },
-      _id: { $nin: solvedIds } // Exclude solved questions
+      //_id: { nin: solvedIds }  right now, not excluding solved questions
     };
 
     // 3. If a difficulty is provided, add it to the query
@@ -371,6 +442,52 @@ app.get('/testreview/:testId', verifyToken, async (req, res) => {
   res.json(test);
 });
 
+
+function generateDiscountProblem() {
+  const price = Math.floor(Math.random() * 91) + 10; // 10-100
+  const discountPercent = (Math.floor(Math.random() * 6) + 1) * 5; // 5%-30%
+  const discountAmount = price * (discountPercent / 100);
+  const finalPrice = price - discountAmount;
+
+  const options = [
+    finalPrice.toFixed(2),
+    (price + discountAmount).toFixed(2),
+    (price * 0.8).toFixed(2), // Generic 20% discount
+  ];
+  // Ensure we have 4 unique options
+  while (options.length < 4) {
+    options.push((finalPrice * (Math.random() * 0.5 + 0.75)).toFixed(2));
+  }
+
+  const shuffledOptions = [...new Set(options)].sort(() => Math.random() - 0.5);
+  const correctAnswerIndex = shuffledOptions.indexOf(finalPrice.toFixed(2));
+
+  return {
+    question: `An item costs $${price}. With a ${discountPercent}% discount, what is the final price?`,
+    options: shuffledOptions,
+    answer: correctAnswerIndex,
+  };
+}
+
+
+// ====== Generate a New Question ======
+app.post('/generatequestion', verifyToken, (req, res) => {
+  try {
+    // 2. Pick a random template function from the array
+    const randomIndex = Math.floor(Math.random() * questionTemplates.length);
+    const selectedTemplate = questionTemplates[randomIndex];
+
+    // 3. Execute the selected function to generate the question
+    const newQuestion = selectedTemplate();
+
+    res.json(newQuestion);
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to generate question.' });
+  }
+});
+
 // ====== Generate Test Report PDF ======
 app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) => {
   try {
@@ -389,7 +506,7 @@ app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) =>
 
     test.questions.forEach((q, index) => {
       const userAnswerObj = test.answers[index];
-      
+
       if (userAnswerObj && userAnswerObj.answer !== null) {
         if (userAnswerObj.answer === q.answer) {
           timeCorrect += userAnswerObj.timeTaken || 0;
@@ -398,7 +515,7 @@ app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) =>
         }
       } else {
         // Assumes time is tracked even for skipped questions, otherwise needs frontend change
-        timeWasted += userAnswerObj?.timeTaken || 0; 
+        timeWasted += userAnswerObj?.timeTaken || 0;
       }
     });
 
@@ -504,10 +621,10 @@ app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) =>
         doc.fillColor(color).text(label, { indent: 20 });
       });
 
-    doc.moveDown();
-    doc.fillColor('#751386').text(`Time Taken: ${userAnswerObj?.timeTaken || 0} seconds`);
-    doc.fillColor('#751386').text(`Score: ${isCorrect ? 1 : 0}`);
-    doc.moveDown();
+      doc.moveDown();
+      doc.fillColor('#751386').text(`Time Taken: ${userAnswerObj?.timeTaken || 0} seconds`);
+      doc.fillColor('#751386').text(`Score: ${isCorrect ? 1 : 0}`);
+      doc.moveDown();
 
     });
 
@@ -519,14 +636,14 @@ app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) =>
     doc.text(`Total Allotted Time: 20 min 0 sec`);
     doc.font('Helvetica-Bold').text('Total Time Spent: ', { continued: true });
     doc.font('Helvetica').text(formatToMins(totalTimeSpent));
-    
+
     doc.moveDown(1);
 
     // Detailed breakdown
     doc.fillColor('green').text(`Correctly Answered: ${formatToMins(timeCorrect)}`);
     doc.fillColor('red').text(`Incorrectly Answered: ${formatToMins(timeIncorrect)}`);
     doc.fillColor('gray').text(`Wasted: ${formatToMins(timeWasted)}`);
-    
+
     doc.fillColor('black'); // Reset color
     doc.moveDown(2);
     // 8. Finalize the PDF
