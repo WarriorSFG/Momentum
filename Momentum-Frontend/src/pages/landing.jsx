@@ -49,7 +49,7 @@ export default function LandingPage() {
             INTRODUCING INDIA&apos;S FIRST EVER AI BASED LEARNING PLATFORM
           </p>
 
-          <Link className="px-6 sm:px-8 py-3 bg-white rounded-full text-sm sm:text-lg shadow-lg text-[#3D096D] font-bold hover:bg-purple-800 hover:text-white transition">
+          <Link to={'/signup'} className="px-6 sm:px-8 py-3 bg-white rounded-full text-sm sm:text-lg shadow-lg text-[#3D096D] font-bold hover:bg-purple-800 hover:text-white transition">
            <button>
             JOIN NOW
           </button>

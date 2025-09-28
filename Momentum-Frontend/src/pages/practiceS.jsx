@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Base from "./base.jsx";
 
 const PracticeS = () => {
@@ -70,7 +70,7 @@ const PracticeS = () => {
             {/* Chapter */}
             <div className="w-full bg-[#1B0033] text-white p-4 rounded-xl max-h-40 overflow-y-auto text-left">
               <p className="mb-2 font-semibold">SELECT CHAPTER(S)</p>
-              {chapters.map((c, idx) => (
+              {selectedSubject !== "" &&( chapters.map((c, idx) => (
                 <div key={idx} className="flex items-center">
                   <input
                     type="checkbox"
@@ -82,7 +82,7 @@ const PracticeS = () => {
                   />
                   <label htmlFor={`chapter-${idx}`}>{c}</label>
                 </div>
-              ))}
+              )))}
             </div>
 
             {/* Difficulty */}
@@ -92,17 +92,24 @@ const PracticeS = () => {
               className="w-full bg-[#1B0033] text-white py-3 px-4 rounded-xl"
             >
               <option value="">SELECT DIFFICULTY</option>
-              {difficulties.map((d, idx) => (
+              {selectedChapters.length!=0 && (difficulties.map((d, idx) => (
                 <option key={idx} value={d}>{d}</option>
-              ))}
+              )))}
             </select>
           </div>
+
+          <Link
+            to="/dashboard"
+            className="bg-[#FFFFFF] text-black font-bold px-8 py-1 mx-2 rounded-full hover:bg-yellow-400 transition"
+          >
+            Back
+          </Link>
 
           <button
             onClick={handleGo}
             className="bg-[#FFD84D] text-black font-bold px-8 py-2 rounded-full hover:bg-yellow-400 transition"
           >
-            GO!
+            Start!
           </button>
         </div>
       </div>

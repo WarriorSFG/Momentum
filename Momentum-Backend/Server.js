@@ -38,6 +38,7 @@ const questionSchema = new mongoose.Schema({
   answer: Number,
   category: { type: String, enum: ["Very easy", "Easy", "Moderate", "Difficult"] },
   chapter: String,
+  type: String,
   subject: String
 })
 
@@ -146,22 +147,12 @@ app.post('/login', async (req, res) => {
 app.get('/stats', verifyToken, async (req, res) => {
   try {
     const tests = await Test.find({ user: req.user.id })
-    const practices = await Practice.find({ user: req.user.id })
+    const practices = await Practice.find({ user: req.user.id }) 
 
-    // From tests
-    const testTotal = tests.reduce((a, t) => a + t.questions.length, 0)
-    const testCorrect = tests.reduce((a, t) => a + (t.score || 0), 0)
-    const testIncorrect = testTotal - testCorrect
-
-    // From practice
-    const practiceTotal = practices.length
-    const practiceCorrect = practices.filter(p => p.correct).length
-    const practiceIncorrect = practiceTotal - practiceCorrect
-
-    // Combined
-    const totalQ = testTotal + practiceTotal
-    const correct = testCorrect + practiceCorrect
-    const incorrect = testIncorrect + practiceIncorrect
+    // total
+    const totalQ = practices.length
+    const correct = practices.filter(p => p.correct).length
+    const incorrect = totalQ - correct
 
     res.json({
       message: "success",
@@ -198,29 +189,48 @@ app.post('/teststart', verifyToken, async (req, res) => {
 // ====== Submit Test ======
 app.post('/testsubmit', verifyToken, async (req, res) => {
   try {
-    const { testID, answers } = req.body; // 'answers' is now [{answer, timeTaken}, ...]
+    const { testID, answers } = req.body;
 
-    const populatedTest = await Test.findById(testID).populate('questions');
-    if (!populatedTest) {
+    // 1. Fetch the test data with questions populated.
+    const test = await Test.findById(testID).populate('questions');
+    if (!test) {
       return res.status(400).json({ error: 'Invalid testID' });
     }
 
     let score = 0;
-    populatedTest.questions.forEach((questionObject, i) => {
-      // Compare the answer property of the answer object
-      if (answers[i] && answers[i].answer === questionObject.answer) {
+    const practiceDocsToCreate = [];
+
+    // 2. Loop through the populated questions to calculate score and prepare practice docs.
+    test.questions.forEach((question, index) => {
+      const userAnswer = answers[index];
+      const isAnswered = userAnswer && userAnswer.answer !== null;
+      
+      // Calculate score
+      const isCorrect = isAnswered && userAnswer.answer === question.answer;
+      if (isCorrect) {
         score++;
+      }
+
+      // If the question was answered, prepare a new practice document for it.
+      if (isAnswered) {
+        practiceDocsToCreate.push({
+          user: req.user.id,
+          questionID: question._id,
+          correct: isCorrect,
+          timeTaken: userAnswer.timeTaken
+        });
       }
     });
 
+    // 3. Save all new practice documents to the database with ONE command.
+    if (practiceDocsToCreate.length > 0) {
+      await Practice.insertMany(practiceDocsToCreate);
+    }
+
+    // 4. Update the test document with the score and answers.
     await Test.updateOne(
       { _id: testID },
-      {
-        $set: {
-          answers: answers, // Save the array of objects
-          score: score
-        }
-      }
+      { $set: { answers: answers, score: score } }
     );
 
     res.json({ message: "success", score });
@@ -367,11 +377,38 @@ app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) =>
     const { testId } = req.params;
     const username = req.user.username;
 
-    // 2. Fetch the test data and populate the questions
+    // 1. Fetch the test data and populate the questions
     const test = await Test.findById(testId).populate('questions');
     if (!test || test.user.toString() !== req.user.id) {
       return res.status(404).json({ error: 'Test not found or access denied.' });
     }
+    //--- Calculate Time Analysis ---
+    let timeCorrect = 0;
+    let timeIncorrect = 0;
+    let timeWasted = 0;
+
+    test.questions.forEach((q, index) => {
+      const userAnswerObj = test.answers[index];
+      
+      if (userAnswerObj && userAnswerObj.answer !== null) {
+        if (userAnswerObj.answer === q.answer) {
+          timeCorrect += userAnswerObj.timeTaken || 0;
+        } else {
+          timeIncorrect += userAnswerObj.timeTaken || 0;
+        }
+      } else {
+        // Assumes time is tracked even for skipped questions, otherwise needs frontend change
+        timeWasted += userAnswerObj?.timeTaken || 0; 
+      }
+    });
+
+    const totalTimeSpent = timeCorrect + timeIncorrect + timeWasted;
+
+    const formatToMins = (seconds) => {
+      const mins = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      return `${mins} min ${secs} sec`;
+    };
 
     // 3. Create a new PDF document
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
@@ -390,7 +427,7 @@ app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) =>
     const x = doc.page.width - 296 / 3 - 30;  // 20px margin from right
     const y = doc.page.height - 37 / 3 - 30; // 20px margin from bottom
 
-    // 1. Define the function to add a background
+    // 5. Define the function to add a background
     const addBackground = () => {
       doc.image('background.jpg', 0, 0, {
         width: doc.page.width,
@@ -404,10 +441,10 @@ app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) =>
       doc.fillColor('black');
     };
 
-    // 2. Listen for the 'pageAdded' event
+    // 6. Listen for the 'pageAdded' event
     doc.on('pageAdded', addBackground);
 
-    // 3. Manually add the background to the FIRST page
+    // 7. Manually add the background to the FIRST page
     addBackground();
     // Header
     doc.fontSize(24).font('Helvetica-Bold').text('Test Report', { align: 'center' });
@@ -467,13 +504,32 @@ app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) =>
         doc.fillColor(color).text(label, { indent: 20 });
       });
 
-      doc.moveDown();
-      doc.fillColor('#751386').text(`Time Taken: ${userAnswerObj?.timeTaken || 0} seconds`);
-      doc.fillColor('#751386').text(`Score: ${isCorrect ? 1 : 0}`);
-      doc.moveDown();
+    doc.moveDown();
+    doc.fillColor('#751386').text(`Time Taken: ${userAnswerObj?.timeTaken || 0} seconds`);
+    doc.fillColor('#751386').text(`Score: ${isCorrect ? 1 : 0}`);
+    doc.moveDown();
+
     });
 
-    // 5. Finalize the PDF
+    doc.moveDown(2);
+    doc.fontSize(16).font('Helvetica-Bold').text('Time Analysis');
+    doc.moveDown(1);
+
+    doc.fontSize(12).font('Helvetica');
+    doc.text(`Total Allotted Time: 20 min 0 sec`);
+    doc.font('Helvetica-Bold').text('Total Time Spent: ', { continued: true });
+    doc.font('Helvetica').text(formatToMins(totalTimeSpent));
+    
+    doc.moveDown(1);
+
+    // Detailed breakdown
+    doc.fillColor('green').text(`Correctly Answered: ${formatToMins(timeCorrect)}`);
+    doc.fillColor('red').text(`Incorrectly Answered: ${formatToMins(timeIncorrect)}`);
+    doc.fillColor('gray').text(`Wasted: ${formatToMins(timeWasted)}`);
+    
+    doc.fillColor('black'); // Reset color
+    doc.moveDown(2);
+    // 8. Finalize the PDF
     doc.end();
 
   } catch (err) {

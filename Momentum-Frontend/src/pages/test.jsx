@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Base from "./base.jsx";
 
 // You can name this component 'Test' or 'TestSelection'
@@ -81,9 +81,17 @@ const TestSelection = () => {
               ))}
             </div>
           </div>
+
+          <Link
+            to="/dashboard"
+            className="bg-[#FFFFFF] text-black font-bold px-8 py-2 mx-2 rounded-full hover:bg-yellow-400 transition"
+          >
+            Back
+          </Link>
+
           <button
             onClick={handleStartTest}
-            className="bg-[#8AE08A] text-[#221149] font-bold px-8 py-3 rounded-full hover:bg-green-400 transition text-lg"
+            className="bg-[#8AE08A] text-[#221149] font-bold px-8 py-2 rounded-full hover:bg-green-400 transition text-lg"
           >
             START!
           </button>

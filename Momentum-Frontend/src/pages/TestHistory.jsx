@@ -55,12 +55,12 @@ const TestHistory = () => {
                                         Score: {test.score} / 10
                                     </p>
                                 </div>
-                                <Link
+                                {/*<Link
                                     to={`/testreview/${test._id}`}
                                     className="px-6 py-2 bg-[#FFD966] text-[#2a0a44] font-bold rounded-full hover:bg-yellow-500"
                                 >
                                     Review
-                                </Link>
+                                </Link>*/}
                                 <a
                                     href={`http://localhost:4000/testreport/${test._id}?token=${token}`}
                                     target="_blank"
