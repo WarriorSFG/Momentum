@@ -507,11 +507,25 @@ app.get('/leaderboard', verifyToken, async (req, res) => {
   }
 });
 
+async function getImageBuffer(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch image: ${response.statusText}`);
+  }
+  // Convert the response to an ArrayBuffer, then to a Node.js Buffer
+  const arrayBuffer = await response.arrayBuffer();
+  return Buffer.from(arrayBuffer);
+}
+
 // ====== Generate Test Report PDF ======
 app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) => {
   try {
     const { testId } = req.params;
     const username = req.user.username;
+
+    // This part now uses the new fetch-based helper function
+    const backgroundBuffer = await getImageBuffer('https://res.cloudinary.com/dvbzgoz9m/image/upload/v1759135128/background_ftyalo.jpg');
+    const logoBuffer = await getImageBuffer('https://res.cloudinary.com/dvbzgoz9m/image/upload/v1759135127/logo_ybv5ad.png');
 
     // 1. Fetch the test data and populate the questions
     const test = await Test.findById(testId).populate('questions');
@@ -548,12 +562,12 @@ app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) =>
 
     // 3. Create a new PDF document
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
-    doc.image('background.jpg', 0, 0, {
+    /*doc.image(backgroundBuffer, 0, 0, {
       width: doc.page.width,
       height: doc.page.height
     });
 
-    doc.image('logo.png', -50, -50, { width: 100 });
+    doc.image(logoBuffer, -50, -50, { width: 100 });*/
 
     // 4. Set headers to stream the PDF to the client
     res.setHeader('Content-Type', 'application/pdf');
@@ -565,14 +579,14 @@ app.get('/testreport/:testId', verifyTokenFromHeaderOrQuery, async (req, res) =>
 
     // 5. Define the function to add a background
     const addBackground = () => {
-      doc.image('background.jpg', 0, 0, {
+      doc.image(backgroundBuffer, 0, 0, {
         width: doc.page.width,
         height: doc.page.height,
         align: 'center',
         valign: 'center'
       });
       doc.roundedRect(20, 20, doc.page.width - 40, doc.page.height - 40, 10).fillColor('#E6E6FA').fill();
-      doc.image('logo.png', x, y, { width: 296 / 3, height: 37 / 3 });
+      doc.image(logoBuffer, x, y, { width: 296 / 3, height: 37 / 3 });
       // Set a default text color for the new page
       doc.fillColor('black');
     };
