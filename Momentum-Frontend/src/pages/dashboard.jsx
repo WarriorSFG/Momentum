@@ -116,14 +116,14 @@ const Dashboard = () => {
               </div>
 
               <div className="bg-[#2a0a44] rounded-2xl p-6 w-56 text-center shadow-md">
-                <h3 className="font-bold text-xl mb-2">um</h3>
+                <h3 className="font-bold text-xl mb-2">AI MODE</h3>
                 <p className="text-sm text-gray-300 mb-4">
-                  What should go here
+                  Uses AI to detect your weak areas and picks questions automatically.
                 </p>
                 <br />
-                <Link to="/test">
-                  <button className="px-6 py-2 bg-[#8AE08A] text-[#221149] font-bold rounded-full hover:bg-green-500">
-                    IDK
+                <Link to="/AIPracticeQ">
+                  <button className="px-6 py-2 bg-[#8AE08A] text-[#221149] font-bold rounded-full hover:bg-green-500 transition-all duration-300 shadow-[0_0_15px_5px_#8AE08A] shadow-[#8AE08A]/50 hover:shadow-xl hover:shadow-yellow-500/50 animate-pulse hover:animate-none">
+                    GO!
                   </button>
                 </Link>
               </div>

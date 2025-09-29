@@ -12,6 +12,7 @@ import PracticeS from './pages/practiceS.jsx'
 import GeneratedS from './pages/GeneratedS.jsx'
 import GeneratedQ from './pages/generatedQ.jsx'
 import Leaderboard from './pages/Leaderboard.jsx'
+import AIPracticeQ from './pages/AIPractice.jsx'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Route path="/practiceQ" element={<PracticeQ />}/>
       <Route path="/practiceA" element={<PracticeA />}/>
       <Route path='/Leaderboard' element={<Leaderboard/>}/>
+      <Route path='/AIPracticeQ' element={<AIPracticeQ/>}/>
     </Routes>
    
     </>

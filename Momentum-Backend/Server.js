@@ -428,6 +428,81 @@ app.post('/practicesubmit', verifyToken, async (req, res) => {
   }
 });
 
+// ====== AI Question Selection ======
+app.get('/aiquestion', verifyToken, async (req, res) => {
+  try {
+    // 1. Fetch user's practice history and solved questions list
+    const user = await User.findById(req.user.id).select('solvedQuestions');
+    const practices = await Practice.find({ user: req.user.id })
+      .populate({ path: 'questionID', select: 'skill_tested' });
+
+    let weakestSkill = null;
+
+    // 2. Analyze history to find the weakest skill
+    if (practices.length > 10) { // Only run analysis if there's enough data
+      const skillScores = {
+        learning: { correct: 0, total: 0, totalTime: 0, score: 0 },
+        grasping: { correct: 0, total: 0, totalTime: 0, score: 0 },
+        application: { correct: 0, total: 0, totalTime: 0, score: 0 },
+      };
+
+      practices.forEach(p => {
+        const skill = p.questionID?.skill_tested;
+        if (skill && skillScores[skill]) {
+          skillScores[skill].total++;
+          skillScores[skill].totalTime += p.timeTaken;
+          if (p.correct) skillScores[skill].correct++;
+        }
+      });
+      
+      // Calculate a performance score for each skill (lower is weaker)
+      for (const skill in skillScores) {
+        const data = skillScores[skill];
+        if (data.total > 0) {
+          const accuracy = data.correct / data.total;
+          const avgTime = data.totalTime / data.total;
+          // Simple scoring: accuracy is important, speed is a tie-breaker
+          data.score = accuracy - (avgTime * 0.01); 
+        }
+      }
+
+      // Find the skill with the lowest score
+      weakestSkill = Object.keys(skillScores).reduce((a, b) => skillScores[a].score < skillScores[b].score ? a : b);
+    }
+    
+    // 3. Find a new question targeting the weakness (or any if no weakness found)
+    const query = {
+      _id: { $nin: user.solvedQuestions } // Must be an unsolved question
+    };
+    if (weakestSkill) {
+      query.skill_tested = weakestSkill; // Target the weak area
+    } else {
+      query.category = "Easy"; // Default for new users
+    }
+
+    const qArr = await Question.aggregate([
+      { $match: query },
+      { $sample: { size: 1 } }
+    ]);
+
+    if (qArr.length === 0) {
+      // Fallback: if no specific question is found, find ANY unsolved question
+      const fallbackQ = await Question.aggregate([
+          { $match: { _id: { $nin: user.solvedQuestions } } },
+          { $sample: { size: 1 } }
+      ]);
+      if(fallbackQ.length === 0) return res.json({ message: "You have solved all questions!" });
+      return res.json(fallbackQ[0]);
+    }
+    
+    res.json(qArr[0]);
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to generate AI question.' });
+  }
+});
+
 // ====== Test History ======
 app.get('/testhistory', verifyToken, async (req, res) => {
   try {
