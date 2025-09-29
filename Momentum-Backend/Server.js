@@ -482,14 +482,28 @@ app.get('/aiquestion', verifyToken, async (req, res) => {
 
     const qArr = await Question.aggregate([
       { $match: query },
-      { $sample: { size: 1 } }
-    ]);
+      { $sample: { size: 1 } },
+      { $project: {
+          questionID: '$_id', // Rename _id to questionID
+          question: 1,      // Include the question field
+          options: 1,       // Include the options field
+          answer: 1,        // Include the answer field
+          _id: 0            // Exclude the original _id field
+      }}
+    ])
 
     if (qArr.length === 0) {
-      // Fallback: if no specific question is found, find ANY unsolved question
+      // Fallback: Also update the fallback query
       const fallbackQ = await Question.aggregate([
           { $match: { _id: { $nin: user.solvedQuestions } } },
-          { $sample: { size: 1 } }
+          { $sample: { size: 1 } },
+          { $project: {
+              questionID: '$_id',
+              question: 1,
+              options: 1,
+              answer: 1,
+              _id: 0
+          }}
       ]);
       if(fallbackQ.length === 0) return res.json({ message: "You have solved all questions!" });
       return res.json(fallbackQ[0]);
