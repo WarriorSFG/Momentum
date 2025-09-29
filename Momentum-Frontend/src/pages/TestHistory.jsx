@@ -63,7 +63,7 @@ const TestHistory = () => {
                                     Review
                                 </Link>*/}
                                 <a
-                                    href={`BACKENDURLtestreport/${test._id}?token=${token}`}
+                                    href={`${BACKENDURL}testreport/${test._id}?token=${token}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="px-6 py-2 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600"
