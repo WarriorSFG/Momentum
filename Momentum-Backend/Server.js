@@ -242,21 +242,36 @@ app.get('/stats', verifyToken, async (req, res) => {
   }
 });
 
-
 // ====== Start Test ======
 app.post('/teststart', verifyToken, async (req, res) => {
   try {
     const { subject, chapters } = req.body;
-    const questions = await Question.find({ subject, chapter: { $in: chapters } }).limit(10);
+
+    // Use aggregate() with $match and $sample instead of find()
+    const questions = await Question.aggregate([
+      // 1. First, find all documents that match the criteria
+      { $match: { 
+          subject: subject, 
+          chapter: { $in: chapters } 
+      }},
+      // 2. Then, randomly sample 10 of those documents
+      { $sample: { size: 10 } }
+    ]);
+
+    if (questions.length < 1) {
+      return res.status(404).json({ message: "No questions found for the selected criteria." });
+    }
 
     const test = await Test.create({
       user: req.user.id,
-      questions: questions.map(q => q._id),
+      questions: questions.map(q => q._id), // This part remains the same
       score: 0,
       answers: []
     });
+    
     res.json({ message: "success", testID: test._id, questions });
-  } catch {
+  } catch(err) {
+    console.error(err);
     res.status(400).json({ error: 'Bad request' });
   }
 });
