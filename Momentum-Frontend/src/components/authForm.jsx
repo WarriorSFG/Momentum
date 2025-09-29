@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { BACKENDURL } from "./Backend";
 
 const AuthForm = ({ heading, option, a }) => {
   const [username, setUsername] = useState("");
@@ -16,7 +17,7 @@ const AuthForm = ({ heading, option, a }) => {
       heading.toLowerCase() === "signup" ? "signup" : "login";
 
     try {
-      const res = await fetch(`http://localhost:4000/${endpoint}`, {
+      const res = await fetch(`${BACKENDURL}${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),

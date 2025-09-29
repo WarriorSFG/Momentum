@@ -4,6 +4,7 @@ import Base from "./base.jsx";
 import Question from "../components/question.jsx";
 import SubmitSkip from "../components/submitSkip.jsx";
 import PracticeA from "./practiceA.jsx"; // We will use this for the answer view
+import { BACKENDURL } from "../components/Backend.js";
 
 const PracticeQ = () => {
   const location = useLocation();
@@ -31,7 +32,7 @@ const PracticeQ = () => {
       setTime(0);
 
       try {
-        const res = await fetch("http://localhost:4000/practicequestion", {
+        const res = await fetch(`${BACKENDURL}practicequestion`, {
           method: "POST",
           headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
           body: JSON.stringify({ subject, chapters, difficulty }),
@@ -64,7 +65,7 @@ const PracticeQ = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:4000/practicesubmit", {
+      const res = await fetch(`${BACKENDURL}practicesubmit`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
         body: JSON.stringify({

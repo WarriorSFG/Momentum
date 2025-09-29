@@ -11,6 +11,7 @@ import TestQ from './pages/TestQ.jsx'
 import PracticeS from './pages/practiceS.jsx'
 import GeneratedS from './pages/GeneratedS.jsx'
 import GeneratedQ from './pages/generatedQ.jsx'
+import Leaderboard from './pages/Leaderboard.jsx'
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
       <Route path="/practiceS" element={<PracticeS />}/>
       <Route path="/practiceQ" element={<PracticeQ />}/>
       <Route path="/practiceA" element={<PracticeA />}/>
-
+      <Route path='/Leaderboard' element={<Leaderboard/>}/>
     </Routes>
    
     </>

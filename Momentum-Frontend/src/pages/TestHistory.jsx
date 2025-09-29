@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Base from "./base.jsx";
 import { Link } from "react-router-dom";
+import { BACKENDURL } from "../components/Backend.js";
 
 const TestHistory = () => {
     const [history, setHistory] = useState([]);
@@ -10,7 +11,7 @@ const TestHistory = () => {
     useEffect(() => {
         const fetchHistory = async () => {
             try {
-                const res = await fetch("http://localhost:4000/testhistory", {
+                const res = await fetch(`${BACKENDURL}testhistory`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 const data = await res.json();
@@ -62,7 +63,7 @@ const TestHistory = () => {
                                     Review
                                 </Link>*/}
                                 <a
-                                    href={`http://localhost:4000/testreport/${test._id}?token=${token}`}
+                                    href={`BACKENDURLtestreport/${test._id}?token=${token}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="px-6 py-2 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600"

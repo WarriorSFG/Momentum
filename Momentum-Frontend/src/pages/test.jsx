@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Base from "./base.jsx";
+import { BACKENDURL } from "../components/Backend.js";
 
 // You can name this component 'Test' or 'TestSelection'
 const TestSelection = () => { 
@@ -14,7 +15,7 @@ const TestSelection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:4000/practiceselect");
+        const res = await fetch(`${BACKENDURL}practiceselect`);
         const data = await res.json();
         setSubjects(data.subjects || []);
         setChapters(data.chapters || []);

@@ -13,8 +13,12 @@ const URL = process.env.MONGOURL
 const app = express()
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors())
 app.use(express.urlencoded({ extended: true }))
+
+app.use(cors({
+  origin: 'https://momentum-lime.vercel.app',
+  credentials: true,
+}));
 
 // Connect to MongoDB
 mongoose.connect(URL)
@@ -442,34 +446,6 @@ app.get('/testreview/:testId', verifyToken, async (req, res) => {
   res.json(test);
 });
 
-
-function generateDiscountProblem() {
-  const price = Math.floor(Math.random() * 91) + 10; // 10-100
-  const discountPercent = (Math.floor(Math.random() * 6) + 1) * 5; // 5%-30%
-  const discountAmount = price * (discountPercent / 100);
-  const finalPrice = price - discountAmount;
-
-  const options = [
-    finalPrice.toFixed(2),
-    (price + discountAmount).toFixed(2),
-    (price * 0.8).toFixed(2), // Generic 20% discount
-  ];
-  // Ensure we have 4 unique options
-  while (options.length < 4) {
-    options.push((finalPrice * (Math.random() * 0.5 + 0.75)).toFixed(2));
-  }
-
-  const shuffledOptions = [...new Set(options)].sort(() => Math.random() - 0.5);
-  const correctAnswerIndex = shuffledOptions.indexOf(finalPrice.toFixed(2));
-
-  return {
-    question: `An item costs $${price}. With a ${discountPercent}% discount, what is the final price?`,
-    options: shuffledOptions,
-    answer: correctAnswerIndex,
-  };
-}
-
-
 // ====== Generate a New Question ======
 app.post('/generatequestion', verifyToken, (req, res) => {
   try {
@@ -485,6 +461,49 @@ app.post('/generatequestion', verifyToken, (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to generate question.' });
+  }
+});
+
+// ====== Leaderboard Route ======
+app.get('/leaderboard', verifyToken, async (req, res) => {
+  try {
+    const leaderboardData = await Practice.aggregate([
+      // 1. Filter for only correct answers
+      { $match: { correct: true } },
+      
+      // 2. Group by user and count the number of correct answers
+      { $group: {
+          _id: '$user', // Group by the 'user' field
+          correctAnswers: { $sum: 1 } // Count documents in each group
+      }},
+      
+      // 3. Sort by the count in descending order
+      { $sort: { correctAnswers: -1 } },
+      
+      // 4. Limit to the top 10 users
+      { $limit: 10 },
+      
+      // 5. Look up the username from the 'users' collection
+      { $lookup: {
+          from: 'users',
+          localField: '_id',
+          foreignField: '_id',
+          as: 'userData'
+      }},
+      
+      // 6. Reshape the output to be cleaner
+      { $project: {
+          _id: 0, // Exclude the original _id
+          username: { $arrayElemAt: ['$userData.username', 0] },
+          score: '$correctAnswers'
+      }}
+    ]);
+
+    res.json(leaderboardData);
+
+  } catch (err) {
+    console.error("Leaderboard Error:", err);
+    res.status(500).json({ error: 'Failed to fetch leaderboard data.' });
   }
 });
 

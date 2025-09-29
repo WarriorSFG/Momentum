@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Base from "./base.jsx";
+import { BACKENDURL } from "../components/Backend.js";
 
 const SelectionPage = ({ mode }) => { 
   const [subjects, setSubjects] = useState([]);
@@ -14,7 +15,7 @@ const SelectionPage = ({ mode }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:4000/practiceselect");
+        const res = await fetch(`${BACKENDURL}practiceselect`);
         const data = await res.json();
         setSubjects(data.subjects || []);
         setChapters(data.chapters || []);

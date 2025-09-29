@@ -2,13 +2,14 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Base from "./base.jsx";
 import QuestionSelect from "../components/questionSelect.jsx";
+import { BACKENDURL } from "../components/Backend.js";
 
 const TestQ = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { subject, chapters } = location.state || {};
   const hasStarted = useRef(false);
-    
+
   // State Management
   const [timeLeft, setTimeLeft] = useState(1200);
   const [testData, setTestData] = useState(null);
@@ -37,7 +38,7 @@ const TestQ = () => {
     
     const startTest = async () => {
       try {
-        const res = await fetch("http://localhost:4000/teststart", {
+        const res = await fetch(`${BACKENDURL}teststart`, {
           method: "POST",
           headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
           body: JSON.stringify({ subject, chapters }),
@@ -88,7 +89,7 @@ const TestQ = () => {
     }
 
     try {
-      await fetch("http://localhost:4000/testsubmit", {
+      await fetch(`${BACKENDURL}testsubmit`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
         body: JSON.stringify({ testID: testData.testID, answers }),

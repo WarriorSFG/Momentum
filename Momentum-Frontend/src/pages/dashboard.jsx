@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Base from "./base.jsx";
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
 import { Link } from "react-router-dom";
+import { BACKENDURL } from "../components/Backend.js";
 
 const Dashboard = () => {
   const [stats, setStats] = useState(null);
@@ -12,7 +13,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await fetch("http://localhost:4000/stats", {
+        const res = await fetch(`${BACKENDURL}stats`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -218,7 +219,25 @@ const Dashboard = () => {
               APPLICATION : {stats.skills.application}
             </span>
           </div>
+            <div className="w-full mt-10">
+              <h3 className="text-4xl font-bold mb-2 text-left">LEADERBOARD</h3>
+              <h4 className="text-xl font-semibold mb-4 text-left">
+                TOP PERFORMERS
+              </h4>
+              <div className="bg-[#2a0a44] text-left rounded-2xl  flex flex-row items-center justify-between max-w-lg">
+                <p className="text-lg text-gray-300 w-3/4">
+                  See how you rank among other users, solve the maximum to reach the top!
+                </p>
+                <Link
+                  to="/Leaderboard"
+                  className="px-6 py-2 bg-white text-purple-700 text-lg rounded-full font-semibold hover:bg-gray-200 text-center"
+                >
+                  Check
+                </Link>
+              </div>
+            </div>
         </div>
+        
       </div>
     </Base>
   );
