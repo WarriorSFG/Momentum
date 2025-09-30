@@ -451,10 +451,10 @@ app.get('/aiquestion', verifyToken, async (req, res) => {
     const practices = await Practice.find({ user: req.user.id })
       .populate({ path: 'questionID', select: 'skill_tested' });
 
-    let targetSkill = null;
+    let weakestSkill = null;
 
-    // 2. Analyze history to find a target skill
-    if (practices.length > 5) { // Run analysis after a few questions
+    // 2. Analyze history to find the weakest skill
+    if (practices.length > 10) { // Only run analysis if there's enough data
       const skillScores = {
         learning: { correct: 0, total: 0, totalTime: 0, score: 0 },
         grasping: { correct: 0, total: 0, totalTime: 0, score: 0 },
@@ -469,50 +469,32 @@ app.get('/aiquestion', verifyToken, async (req, res) => {
           if (p.correct) skillScores[skill].correct++;
         }
       });
-
-      // --- NEW LOGIC BLOCK ---
-
-      // A. First, check for any skills the user has never tried
-      const unattemptedSkills = Object.keys(skillScores).filter(skill => skillScores[skill].total === 0);
-
-      if (unattemptedSkills.length > 0) {
-        // If there are unattempted skills, pick one of them
-        targetSkill = unattemptedSkills[Math.floor(Math.random() * unattemptedSkills.length)];
-        console.log(`Targeting unattempted skill: ${targetSkill}`);
-      } else {
-        // B. If all skills have been tried, use weighted random selection
-        for (const skill in skillScores) {
-          const data = skillScores[skill];
-          if (data.total > 0) {
-            const accuracy = data.correct / data.total;
-            const avgTime = data.totalTime / data.total;
-            data.score = accuracy - (avgTime * 0.01);
-          }
+      
+      // Calculate a performance score for each skill (lower is weaker)
+      for (const skill in skillScores) {
+        const data = skillScores[skill];
+        if (data.total > 0) {
+          const accuracy = data.correct / data.total;
+          const avgTime = data.totalTime / data.total;
+          // Simple scoring: accuracy is important, speed is a tie-breaker
+          data.score = accuracy - (avgTime * 0.01); 
         }
-        
-        const skills = Object.keys(skillScores);
-        const weights = skills.map(skill => Math.max(0, 1 - skillScores[skill].score) + 0.1);
-        const totalWeight = weights.reduce((sum, w) => sum + w, 0);
-        const random = Math.random() * totalWeight;
-
-        let weightSum = 0;
-        for (let i = 0; i < skills.length; i++) {
-          weightSum += weights[i];
-          if (random <= weightSum) {
-            targetSkill = skills[i];
-            break;
-          }
-        }
-        console.log(`Targeting user's weak area (weighted): ${targetSkill}`);
+      }
+      // Check for any skill with zero attempts
+      if(skillScores.learning.total === 0 || skillScores.grasping.total === 0 || skillScores.application.total === 0) {
+        weakestSkill = Object.keys(skillScores).find(skill => skillScores[skill].total === 0);
+      }else {
+      // Find the skill with the lowest score
+        weakestSkill = Object.keys(skillScores).reduce((a, b) => skillScores[a].score < skillScores[b].score ? a : b);
       }
     }
     
-    // 3. Find a new question targeting the chosen skill
+    // 3. Find a new question targeting the weakness (or any if no weakness found)
     const query = {
-      _id: { $nin: user.solvedQuestions }
+      _id: { $nin: user.solvedQuestions } // Must be an unsolved question
     };
-    if (targetSkill) {
-      query.skill_tested = targetSkill;
+    if (weakestSkill) {
+      query.skill_tested = weakestSkill; // Target the weak area
     } else {
       query.category = "Easy"; // Default for new users
     }
@@ -521,20 +503,26 @@ app.get('/aiquestion', verifyToken, async (req, res) => {
       { $match: query },
       { $sample: { size: 1 } },
       { $project: {
-          questionID: '$_id',
-          question: 1,
-          options: 1,
-          answer: 1,
-          _id: 0
+          questionID: '$_id', // Rename _id to questionID
+          question: 1,      // Include the question field
+          options: 1,       // Include the options field
+          answer: 1,        // Include the answer field
+          _id: 0            // Exclude the original _id field
       }}
-    ]);
+    ])
 
     if (qArr.length === 0) {
-      // Fallback logic remains the same
+      // Fallback: Also update the fallback query
       const fallbackQ = await Question.aggregate([
           { $match: { _id: { $nin: user.solvedQuestions } } },
           { $sample: { size: 1 } },
-          { $project: { /* ... same as above */ }}
+          { $project: {
+              questionID: '$_id',
+              question: 1,
+              options: 1,
+              answer: 1,
+              _id: 0
+          }}
       ]);
       if(fallbackQ.length === 0) return res.json({ message: "You have solved all questions!" });
       return res.json(fallbackQ[0]);
