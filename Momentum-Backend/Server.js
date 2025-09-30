@@ -446,73 +446,68 @@ app.post('/practicesubmit', verifyToken, async (req, res) => {
 // ====== AI Question Selection ======
 app.get('/aiquestion', verifyToken, async (req, res) => {
   try {
-    // 1. Fetch user's practice history and solved questions list
     const user = await User.findById(req.user.id).select('solvedQuestions');
     const practices = await Practice.find({ user: req.user.id })
       .populate({ path: 'questionID', select: 'skill_tested' });
 
     let targetSkill = null;
 
-    // 2. Analyze history to find a target skill
-    if (practices.length > 5) {
-      const skillScores = {
-        learning: { correct: 0, total: 0, totalTime: 0, score: 0 },
-        grasping: { correct: 0, total: 0, totalTime: 0, score: 0 },
-        application: { correct: 0, total: 0, totalTime: 0, score: 0 },
-      };
+    // --- Tally Skill Counts (run this every time) ---
+    const skillScores = {
+      learning: { correct: 0, total: 0, totalTime: 0, score: 0 },
+      grasping: { correct: 0, total: 0, totalTime: 0, score: 0 },
+      application: { correct: 0, total: 0, totalTime: 0, score: 0 },
+    };
+    practices.forEach(p => {
+      const skill = p.questionID?.skill_tested;
+      if (skill && skillScores[skill]) {
+        skillScores[skill].total++;
+        skillScores[skill].totalTime += p.timeTaken;
+        if (p.correct) skillScores[skill].correct++;
+      }
+    });
 
-      practices.forEach(p => {
-        const skill = p.questionID?.skill_tested;
-        if (skill && skillScores[skill]) {
-          skillScores[skill].total++;
-          skillScores[skill].totalTime += p.timeTaken;
-          if (p.correct) skillScores[skill].correct++;
-        }
-      });
+    // --- NEW, ROBUST SELECTION LOGIC ---
+    
+    // 1. Highest Priority: Check for unattempted skills.
+    const unattemptedSkills = Object.keys(skillScores).filter(skill => skillScores[skill].total === 0);
 
-      // A. First, check for any skills the user has never tried
-      const unattemptedSkills = Object.keys(skillScores).filter(skill => skillScores[skill].total === 0);
-
-      if (unattemptedSkills.length > 0) {
-        // If there are unattempted skills, pick one of them
-        targetSkill = unattemptedSkills[Math.floor(Math.random() * unattemptedSkills.length)];
-        console.log(`Targeting unattempted skill: ${targetSkill}`);
-      } else {
-        // B. If all skills have been tried, use weighted random selection
-        for (const skill in skillScores) {
-          const data = skillScores[skill];
-          if (data.total > 0) {
+    if (unattemptedSkills.length > 0) {
+      // If there are skills with zero attempts, pick one of them.
+      targetSkill = unattemptedSkills[Math.floor(Math.random() * unattemptedSkills.length)];
+      console.log(`Priority: Targeting unattempted skill: ${targetSkill}`);
+    } else if (practices.length > 5) {
+      // 2. If all skills have been attempted AND there's enough data, use weighted logic.
+      for (const skill in skillScores) {
+        const data = skillScores[skill];
+        if (data.total > 0) {
             const accuracy = data.correct / data.total;
             const avgTime = data.totalTime / data.total;
             data.score = accuracy - (avgTime * 0.01);
-          }
         }
-        
-        const skills = Object.keys(skillScores);
-        const weights = skills.map(skill => Math.max(0, 1 - skillScores[skill].score) + 0.1);
-        const totalWeight = weights.reduce((sum, w) => sum + w, 0);
-        const random = Math.random() * totalWeight;
-
-        let weightSum = 0;
-        for (let i = 0; i < skills.length; i++) {
-          weightSum += weights[i];
-          if (random <= weightSum) {
-            targetSkill = skills[i];
-            break;
-          }
-        }
-        console.log(`Targeting user's weak area (weighted): ${targetSkill}`);
       }
+      
+      const skills = Object.keys(skillScores);
+      const weights = skills.map(skill => Math.max(0, 1 - skillScores[skill].score) + 0.1);
+      const totalWeight = weights.reduce((sum, w) => sum + w, 0);
+      const random = Math.random() * totalWeight;
+
+      let weightSum = 0;
+      for (let i = 0; i < skills.length; i++) {
+        weightSum += weights[i];
+        if (random <= weightSum) {
+          targetSkill = skills[i];
+          break;
+        }
+      }
+      console.log(`Targeting weak area (weighted): ${targetSkill}`);
     }
-    
-    // 3. Find a new question targeting the chosen skill
-    const query = {
-      _id: { $nin: user.solvedQuestions }
-    };
+    // 3. If neither of the above, targetSkill remains null, and the query will be random.
+
+    // --- Find a new question ---
+    const query = { _id: { $nin: user.solvedQuestions } };
     if (targetSkill) {
       query.skill_tested = targetSkill;
-    } else {
-      query.category = "Easy"; // Default for new users
     }
 
     const qArr = await Question.aggregate([
