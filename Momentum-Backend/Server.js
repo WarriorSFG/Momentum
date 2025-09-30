@@ -481,8 +481,8 @@ app.get('/aiquestion', verifyToken, async (req, res) => {
         }
       }
       // Check for any skill with zero attempts
-      if(skillScores.learning.total === 0 || skillScores.grasping.total === 0 || skillScores.application.total === 0) {
-        weakestSkill = Object.keys(skillScores).find(skill => skillScores[skill].total === 0);
+      if(skillScores.learning.correct === 0 || skillScores.grasping.correct === 0 || skillScores.application.correct === 0) {
+        weakestSkill = Object.keys(skillScores).find(skill => skillScores[skill].correct === 0);
       }else {
       // Find the skill with the lowest score
         weakestSkill = Object.keys(skillScores).reduce((a, b) => skillScores[a].score < skillScores[b].score ? a : b);
