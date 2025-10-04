@@ -28,6 +28,9 @@ const AuthForm = ({ heading, option, a }) => {
       if (res.ok) {
         if (endpoint === "signup") {
           setMessage("Account created! Redirecting...");
+          
+          // redirect after short delay
+          setTimeout(() => navigate("/login"), 1000);
         } else {
           setMessage("Login successful!");
           // Save token if login
@@ -37,10 +40,11 @@ const AuthForm = ({ heading, option, a }) => {
           if(data.username){
             localStorage.setItem("username", data.username);
           }
+          
+          // redirect after short delay
+          setTimeout(() => navigate("/dashboard"), 1000);
         }
 
-        // redirect after short delay
-        setTimeout(() => navigate("/dashboard"), 1000);
       } else {
         setMessage(data.error || "Request failed");
       }

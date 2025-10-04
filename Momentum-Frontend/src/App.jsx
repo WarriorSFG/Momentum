@@ -13,6 +13,7 @@ import GeneratedS from './pages/GeneratedS.jsx'
 import GeneratedQ from './pages/generatedQ.jsx'
 import Leaderboard from './pages/Leaderboard.jsx'
 import AIPracticeQ from './pages/AIPractice.jsx'
+import NotFoundPage from './pages/NotFound.jsx'
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       <Route path="/practiceA" element={<PracticeA />}/>
       <Route path='/Leaderboard' element={<Leaderboard/>}/>
       <Route path='/AIPracticeQ' element={<AIPracticeQ/>}/>
+      <Route path='*' element={<NotFoundPage/>}/>
     </Routes>
    
     </>
