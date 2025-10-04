@@ -1,3 +1,5 @@
+import React from 'react';
+
 const QuestionSelect = ({
   answers,
   currentQuestionIndex,
@@ -9,8 +11,8 @@ const QuestionSelect = ({
     if (index === currentQuestionIndex) {
       return "bg-[#FFD966] text-black ring-2 ring-white"; // Current question
     }
-    // This check is now correct. It will only be true if an answer object exists.
-    if (answers[index] !== null) {
+    // FIX: Check if the 'answer' property is not null
+    if (answers[index]?.answer !== null) {
       return "bg-[#8AE08A] text-black"; // Answered question
     }
     return "bg-black text-white"; // Unanswered question
